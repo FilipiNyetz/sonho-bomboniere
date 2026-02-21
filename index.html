@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonho Meu Bomboniere - Doces, Chocolates e Festas</title>
+    <meta name="description" content="Sonho Meu Bomboniere: doces, chocolates, embalagens e tudo para sua festa. Atendimento próximo e variedade que você merece!" />
+    <meta name="author" content="Sonho Meu Bomboniere" />
+    <meta property="og:title" content="Sonho Meu Bomboniere - Doces, Chocolates e Festas" />
+    <meta property="og:description" content="Tudo para sua festa começar com um sorriso. Doces, embalagens, chocolates e muito mais!" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ====================================================
+         RESET & BASE
+      ==================================================== */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --primary:            hsl(194, 93%, 47%);
+        --primary-dark:       hsl(194, 90%, 36%);
+        --primary-foreground: hsl(0, 0%, 100%);
+        --secondary:          hsl(46, 100%, 50%);
+        --secondary-foreground: hsl(200, 30%, 15%);
+        --background:         hsl(0, 0%, 100%);
+        --foreground:         hsl(200, 30%, 15%);
+        --card:               hsl(0, 0%, 100%);
+        --muted:              hsl(194, 30%, 95%);
+        --muted-foreground:   hsl(200, 15%, 45%);
+        --accent:             hsl(340, 100%, 70%);
+        --radius:             1rem;
+        --whatsapp-green:     #25D366;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--background);
+        color: var(--foreground);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ====================================================
+         LAYOUT
+      ==================================================== */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* ====================================================
+         BUTTONS
+      ==================================================== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        border: none;
+        white-space: nowrap;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      .btn-secondary {
+        background-color: var(--secondary);
+        color: var(--secondary-foreground);
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-secondary:hover {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-lg {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.25rem;
+      }
+
+      /* ====================================================
+         KEYFRAME ANIMATIONS
+      ==================================================== */
+      @keyframes scale-in {
+        from { opacity: 0; transform: scale(0.8); }
+        to   { opacity: 1; transform: scale(1); }
+      }
+
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(24px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes fade-in-left {
+        from { opacity: 0; transform: translateX(-60px); }
+        to   { opacity: 1; transform: translateX(0); }
+      }
+
+      @keyframes bounce-soft {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-6px); }
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 0 0 hsla(46, 100%, 50%, 0.5), 0 4px 20px rgba(0,0,0,0.15); }
+        50%      { box-shadow: 0 0 0 18px hsla(46, 100%, 50%, 0), 0 4px 20px rgba(0,0,0,0.15); }
+      }
+
+      /* ====================================================
+         HERO SECTION
+      ==================================================== */
+      #hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary);
+        overflow: hidden;
+      }
+
+      .hero-blob-1 {
+        position: absolute;
+        top: -5rem;
+        left: -5rem;
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%;
+        background-color: hsla(194, 90%, 36%, 0.22);
+        filter: blur(64px);
+        pointer-events: none;
+      }
+
+      .hero-blob-2 {
+        position: absolute;
+        bottom: -8rem;
+        right: -5rem;
+        width: 32rem;
+        height: 32rem;
+        border-radius: 50%;
+        background-color: hsla(46, 100%, 50%, 0.12);
+        filter: blur(72px);
+        pointer-events: none;
+      }
+
+      .hero-wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 4rem 1.5rem 9rem;
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      .hero-logo {
+        margin: 0 auto 2rem;
+        width: 12rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.18));
+        animation: scale-in 0.8s ease-out both;
+      }
+
+      @media (min-width: 768px) {
+        .hero-logo { width: 16rem; }
+      }
+
+      .hero-title {
+        font-family: 'Fredoka One', cursive;
+        font-size: clamp(2rem, 5.5vw, 3.75rem);
+        color: var(--primary-foreground);
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        animation: fade-in 0.7s ease-out 0.3s both;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        color: rgba(255, 255, 255, 0.92);
+        max-width: 40rem;
+        margin: 0 auto 2.5rem;
+        animation: fade-in 0.7s ease-out 0.5s both;
+      }
+
+      .hero-cta {
+        animation: fade-in 0.6s ease-out 0.7s both, pulse-glow 2.5s ease-in-out 1.5s infinite;
+      }
+
+      /* ====================================================
+         ABOUT SECTION
+      ==================================================== */
+      #about {
+        padding: 5rem 0 7rem;
+        background-color: var(--background);
+      }
+
+      .section-title {
+        font-family: 'Fredoka One', cursive;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        text-align: center;
+        color: var(--foreground);
+        margin-bottom: 1rem;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: var(--muted-foreground);
+        max-width: 42rem;
+        margin: 0 auto 3.5rem;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        max-width: 56rem;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 768px) {
+        .about-grid { grid-template-columns: repeat(3, 1fr); }
+      }
+
+      .about-card {
+        background-color: var(--muted);
+        border-radius: var(--radius);
+        padding: 2rem 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .about-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-card-icon {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 1rem;
+        line-height: 1;
+      }
+
+      .about-card-title {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--foreground);
+        margin-bottom: 0.5rem;
+      }
+
+      .about-card-desc {
+        color: var(--muted-foreground);
+        font-size: 0.95rem;
+      }
+
+      /* Scroll-driven animation — about cards */
+      @supports (animation-timeline: view()) {
+        .about-card {
+          animation: fade-in linear both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 35%;
+        }
+      }
+
+      /* ====================================================
+         SOBRE NÓS SECTION
+      ==================================================== */
+      #sobre-nos {
+        padding: 5rem 0 7rem;
+        background-color: var(--muted);
+      }
+
+      .sobre-nos-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        max-width: 60rem;
+        margin: 0 auto;
+        align-items: center;
+      }
+
+      @media (min-width: 768px) {
+        .sobre-nos-grid { grid-template-columns: 1fr 1fr; }
+      }
+
+      .sobre-nos-text p {
+        color: var(--muted-foreground);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .sobre-nos-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      .sobre-nos-highlight {
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: var(--primary-foreground);
+        border-radius: var(--radius);
+        padding: 2.5rem 2rem;
+        text-align: center;
+      }
+
+      .sobre-nos-highlight-emoji {
+        font-size: 3.5rem;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      .sobre-nos-highlight h3 {
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .sobre-nos-highlight p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.88);
+        line-height: 1.7;
+      }
+
+      @supports (animation-timeline: view()) {
+        .sobre-nos-grid {
+          animation: fade-in linear both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 30%;
+        }
+      }
+
+      /* ====================================================
+         DATAS MARCANTES SECTION
+      ==================================================== */
+      #datas-marcantes {
+        padding: 5rem 0 7rem;
+        background-color: var(--background);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .datas-marcantes-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        max-width: 64rem;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 580px) {
+        .datas-marcantes-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      @media (min-width: 900px) {
+        .datas-marcantes-grid { grid-template-columns: repeat(4, 1fr); }
+      }
+
+      .data-card {
+        background: linear-gradient(145deg, var(--card), var(--muted));
+        border-radius: var(--radius);
+        padding: 2rem 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .data-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        border-color: var(--primary);
+      }
+
+      .data-card-emoji {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 0.75rem;
+        line-height: 1;
+      }
+
+      .data-card-title {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: var(--foreground);
+        margin-bottom: 0.4rem;
+      }
+
+      .data-card-desc {
+        color: var(--muted-foreground);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .datas-marcantes-quote {
+        max-width: 42rem;
+        margin: 3rem auto 0;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+        color: var(--primary);
+        line-height: 1.4;
+      }
+
+      @supports (animation-timeline: view()) {
+        .data-card {
+          animation: fade-in linear both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 35%;
+        }
+      }
+
+      /* ====================================================
+         PRODUCTS SECTION
+      ==================================================== */
+      #products {
+        padding: 5rem 0 7rem;
+        background-color: var(--muted);
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 80rem;
+        margin: 0 auto 3rem;
+      }
+
+      @media (min-width: 580px) {
+        .products-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      @media (min-width: 1024px) {
+        .products-grid { grid-template-columns: repeat(4, 1fr); }
+      }
+
+      .product-card {
+        background-color: var(--card);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+      }
+
+      .product-card-img-wrapper {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+
+      .product-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .product-card:hover .product-card-img {
+        transform: scale(1.1);
+      }
+
+      .product-card-body {
+        padding: 1.25rem;
+      }
+
+      .product-card-title {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--foreground);
+        margin-bottom: 0.3rem;
+      }
+
+      .product-card-desc {
+        color: var(--muted-foreground);
+        font-size: 0.875rem;
+      }
+
+      .products-cta {
+        text-align: center;
+      }
+
+      /* Scroll-driven animation — product cards */
+      @supports (animation-timeline: view()) {
+        .product-card {
+          animation: fade-in linear both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 30%;
+        }
+      }
+
+      /* ====================================================
+         EXPERIENCE SECTION
+      ==================================================== */
+      #experience {
+        padding: 5rem 0 7rem;
+        background-color: var(--primary-dark);
+        color: var(--primary-foreground);
+      }
+
+      .experience-inner {
+        max-width: 48rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .experience-title {
+        font-family: 'Fredoka One', cursive;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        color: var(--primary-foreground);
+        margin-bottom: 1rem;
+        line-height: 1.25;
+      }
+
+      .experience-subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: rgba(255, 255, 255, 0.82);
+        margin-bottom: 2.5rem;
+      }
+
+      .experience-cta {
+        animation: pulse-glow 2.5s ease-in-out infinite;
+      }
+
+      /* Scroll-driven animation — experience section */
+      @supports (animation-timeline: view()) {
+        .experience-inner {
+          animation: fade-in-left linear both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 30%;
+        }
+      }
+
+      /* ====================================================
+         LOCATION SECTION
+      ==================================================== */
+      #location {
+        padding: 5rem 0 7rem;
+        background-color: var(--background);
+      }
+
+      .map-wrapper {
+        max-width: 56rem;
+        margin: 0 auto 2.5rem;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.14);
+      }
+
+      .map-wrapper iframe {
+        display: block;
+        width: 100%;
+        border: none;
+      }
+
+      .location-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      @media (min-width: 580px) {
+        .location-buttons { flex-direction: row; }
+      }
+
+      /* Scroll-driven animation — map */
+      @supports (animation-timeline: view()) {
+        .map-wrapper {
+          animation: fade-in linear both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 25%;
+        }
+      }
+
+      /* ====================================================
+         FOOTER
+      ==================================================== */
+      #footer {
+        padding: 3.5rem 0;
+        background-color: var(--primary);
+      }
+
+      .footer-inner {
+        text-align: center;
+      }
+
+      .footer-logo {
+        margin: 0 auto 1.5rem;
+        width: 8rem;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+      }
+
+      .footer-tagline {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.0625rem;
+        margin-bottom: 2rem;
+      }
+
+      /* ====================================================
+         FLOATING WHATSAPP BUTTON
+      ==================================================== */
+      .floating-whatsapp {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 9999;
+        background-color: var(--whatsapp-green);
+        color: #fff;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+        animation: bounce-soft 2s ease-in-out infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .floating-whatsapp:hover {
+        animation: none;
+        transform: scale(1.15);
+        box-shadow: 0 8px 32px rgba(37, 211, 102, 0.65);
+      }
+
+      .floating-whatsapp svg {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ================================================
+         HERO SECTION
+    ================================================ -->
+    <section id="hero">
+      <div class="hero-blob-1"></div>
+      <div class="hero-blob-2"></div>
+
+      <svg class="hero-wave" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H0Z" fill="white" />
+      </svg>
+
+      <div class="container">
+        <div class="hero-content">
+          <img
+            src="assets/logo.png"
+            alt="Sonho Meu Bomboniere"
+            class="hero-logo"
+          />
+          <h1 class="hero-title">
+            Tudo para sua festa começar<br /> com um sorriso 🎉
+          </h1>
+          <p class="hero-subtitle">
+            Doces, embalagens, chocolates e tudo para transformar momentos em comemoração.
+          </p>
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary btn-lg hero-cta"
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Comprar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ABOUT SECTION
+    ================================================ -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Mais do que uma bomboniere, um lugar de alegria</h2>
+        <p class="section-subtitle">
+          Somos especialistas em festas e datas comemorativas. Aqui você encontra variedade, praticidade e um atendimento que faz você se sentir em casa.
+        </p>
+        <div class="about-grid">
+          <div class="about-card">
+            <span class="about-card-icon">🎈</span>
+            <h3 class="about-card-title">Variedade</h3>
+            <p class="about-card-desc">Tudo o que você precisa em um só lugar</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">🍬</span>
+            <h3 class="about-card-title">Qualidade</h3>
+            <p class="about-card-desc">Produtos selecionados com carinho</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">💛</span>
+            <h3 class="about-card-title">Atendimento próximo</h3>
+            <p class="about-card-desc">A gente te ajuda a montar sua festa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SOBRE NÓS SECTION
+    ================================================ -->
+    <section id="sobre-nos">
+      <div class="container">
+        <h2 class="section-title">Sobre Nós</h2>
+        <p class="section-subtitle">Conheça a história por trás de cada doce e de cada sorriso.</p>
+        <div class="sobre-nos-grid">
+          <div class="sobre-nos-text">
+            <p>
+              A <strong>Sonho Meu Bomboniere</strong> nasceu de um sonho simples: levar alegria para cada comemoração. Há anos atendemos famílias, festeiros e apaixonados por doces com carinho, dedicação e aquele atendimento de quem realmente se importa.
+            </p>
+            <p>
+              Acreditamos que cada festa merece ser especial e cada detalhe conta. Por isso, selecionamos os melhores produtos — de chocolates artesanais a embalagens encantadoras — para que sua celebração seja inesquecível.
+            </p>
+            <p>
+              Mais do que uma loja, somos parceiros dos seus melhores momentos. Aqui, cada cliente é tratado como família, e cada pedido é preparado com o mesmo cuidado que teríamos com a nossa própria festa. 💛
+            </p>
+          </div>
+          <div class="sobre-nos-highlight">
+            <span class="sobre-nos-highlight-emoji">🏪</span>
+            <h3>Nossa Missão</h3>
+            <p>Transformar cada comemoração em um momento mágico, oferecendo produtos de qualidade, variedade e um atendimento acolhedor que faz toda a diferença.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         DATAS MARCANTES SECTION
+    ================================================ -->
+    <section id="datas-marcantes">
+      <div class="container">
+        <h2 class="section-title">Cada data merece ser celebrada ✨</h2>
+        <p class="section-subtitle">
+          Datas marcantes são mais do que números no calendário — são oportunidades de criar memórias, reunir quem amamos e espalhar felicidade. A gente acredita que comemorar é um ato de amor.
+        </p>
+        <div class="datas-marcantes-grid">
+          <div class="data-card">
+            <span class="data-card-emoji">🎂</span>
+            <h3 class="data-card-title">Aniversários</h3>
+            <p class="data-card-desc">Cada ano vivido merece uma festa à altura. A alegria de soprar as velinhas é insubstituível!</p>
+          </div>
+          <div class="data-card">
+            <span class="data-card-emoji">🎄</span>
+            <h3 class="data-card-title">Natal & Ano Novo</h3>
+            <p class="data-card-desc">Época de gratidão, presentes e doces que aquecem o coração de toda a família.</p>
+          </div>
+          <div class="data-card">
+            <span class="data-card-emoji">🐣</span>
+            <h3 class="data-card-title">Páscoa</h3>
+            <p class="data-card-desc">Chocolate e carinho andam juntos. Faça dessa Páscoa a mais doce de todas.</p>
+          </div>
+          <div class="data-card">
+            <span class="data-card-emoji">🎓</span>
+            <h3 class="data-card-title">Formaturas & Conquistas</h3>
+            <p class="data-card-desc">Toda conquista merece celebração. Brinde suas vitórias com quem você ama.</p>
+          </div>
+        </div>
+        <p class="datas-marcantes-quote">
+          "A felicidade está nos detalhes de cada comemoração — e a gente cuida de cada um deles pra você." 🎉
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================
+         PRODUCTS SECTION
+    ================================================ -->
+    <section id="products">
+      <div class="container">
+        <h2 class="section-title">Aqui você encontra tudo para comemorar</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-card-img-wrapper">
+              <img src="assets/chocolates.jpg" alt="Chocolates" class="product-card-img" loading="lazy" />
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Chocolates</h3>
+              <p class="product-card-desc">Bombons, barras e trufas irresistíveis</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-img-wrapper">
+              <img src="assets/balas-doces.jpg" alt="Balas e Doces" class="product-card-img" loading="lazy" />
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Balas e Doces</h3>
+              <p class="product-card-desc">Gomas, pirulitos e muito mais sabor</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-img-wrapper">
+              <img src="assets/festas.jpg" alt="Produtos para Festas" class="product-card-img" loading="lazy" />
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Produtos para Festas</h3>
+              <p class="product-card-desc">Balões, decoração e tudo para o dia</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-img-wrapper">
+              <img src="assets/embalagens.jpg" alt="Embalagens e Lembrancinhas" class="product-card-img" loading="lazy" />
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-title">Embalagens e Lembrancinhas</h3>
+              <p class="product-card-desc">Aquele toque especial no presente</p>
+            </div>
+          </div>
+        </div>
+        <div class="products-cta">
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Quero montar minha festa
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         EXPERIENCE SECTION
+    ================================================ -->
+    <section id="experience">
+      <div class="container">
+        <div class="experience-inner">
+          <h2 class="experience-title">
+            Aniversário, data especial ou só vontade de adoçar o dia?
+          </h2>
+          <p class="experience-subtitle">A gente te ajuda a escolher tudo, sem complicação.</p>
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary btn-lg experience-cta"
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Falar agora no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         LOCATION SECTION
+    ================================================ -->
+    <section id="location">
+      <div class="container">
+        <h2 class="section-title">Estamos pertinho de você</h2>
+        <p class="section-subtitle">Prefere escolher pessoalmente? Vem visitar a Sonho Meu.</p>
+        <div class="map-wrapper">
+          <iframe
+            title="Localização Sonho Meu Bomboniere"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0!2d-46.63!3d-23.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAwLjAiUyA0NsKwMzcnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
+            height="380"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="location-buttons">
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            📍 Ver rota no Google Maps
+          </a>
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Comprar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         FOOTER
+    ================================================ -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <img
+            src="assets/logo.png"
+            alt="Sonho Meu Bomboniere"
+            class="footer-logo"
+          />
+          <p class="footer-tagline">
+            Sonho Meu Bomboniere — onde cada comemoração ganha vida.
+          </p>
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary btn-lg"
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Chamar no WhatsApp agora
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================================================
+         FLOATING WHATSAPP BUTTON
+    ================================================ -->
+    <a
+      href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="floating-whatsapp"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+
+  </body>
+</html>

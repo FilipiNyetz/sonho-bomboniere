@@ -1,1409 +1,2125 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sonho Meu Bomboniere - Doces, Chocolates e Festas</title>
-    <meta name="description" content="Sonho Meu Bomboniere: doces, chocolates, embalagens e tudo para sua festa." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <style>
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonho Meu Bomboniere - Doces, Chocolates e Festas</title>
+  <meta name="description" content="Sonho Meu Bomboniere: doces, chocolates, embalagens e tudo para sua festa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-      :root {
-        --primary: hsl(194, 93%, 47%);
-        --primary-dark: hsl(194, 90%, 36%);
-        --primary-foreground: hsl(0, 0%, 100%);
-        --secondary: hsl(46, 100%, 50%);
-        --secondary-foreground: hsl(200, 30%, 15%);
-        --background: hsl(0, 0%, 100%);
-        --foreground: hsl(200, 30%, 15%);
-        --card: hsl(0, 0%, 100%);
-        --muted: hsl(194, 30%, 95%);
-        --muted-foreground: hsl(200, 15%, 45%);
-        --accent: hsl(340, 100%, 70%);
-        --radius: 1rem;
-        --whatsapp-green: #25D366;
-        --chocolate: hsl(25, 60%, 28%);
-        --chocolate-light: hsl(30, 50%, 40%);
-        --gold: hsl(43, 90%, 55%);
-        --gold-light: hsl(43, 100%, 70%);
-        --pink: hsl(340, 80%, 65%);
-        --pink-light: hsl(340, 90%, 85%);
-        --blue-candy: hsl(200, 80%, 60%);
-        --yellow-candy: hsl(50, 100%, 60%);
-        --purple-candy: hsl(280, 60%, 65%);
-      }
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      html { scroll-behavior: smooth; }
+    :root {
+      --primary: hsl(194, 93%, 47%);
+      --primary-dark: hsl(194, 90%, 36%);
+      --primary-foreground: hsl(0, 0%, 100%);
+      --secondary: hsl(46, 100%, 50%);
+      --secondary-foreground: hsl(200, 30%, 15%);
+      --background: hsl(0, 0%, 100%);
+      --foreground: hsl(200, 30%, 15%);
+      --card: hsl(0, 0%, 100%);
+      --muted: hsl(194, 30%, 95%);
+      --muted-foreground: hsl(200, 15%, 45%);
+      --accent: hsl(340, 100%, 70%);
+      --radius: 1rem;
+      --whatsapp-green: #25D366;
+      --chocolate: hsl(25, 60%, 28%);
+      --chocolate-light: hsl(30, 50%, 40%);
+      --gold: hsl(43, 90%, 55%);
+      --gold-light: hsl(43, 100%, 70%);
+      --pink: hsl(340, 80%, 65%);
+      --pink-light: hsl(340, 90%, 85%);
+      --blue-candy: hsl(200, 80%, 60%);
+      --yellow-candy: hsl(50, 100%, 60%);
+      --purple-candy: hsl(280, 60%, 65%);
+    }
 
-      body {
-        font-family: 'Poppins', sans-serif;
-        background-color: var(--background);
-        color: var(--foreground);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      img { max-width: 100%; display: block; }
-      a { text-decoration: none; color: inherit; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-      /* ====== BUTTONS ====== */
-      .btn {
-        display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
-        font-family: 'Nunito', sans-serif; font-weight: 800; border-radius: 9999px;
-        cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-decoration: none; border: none; white-space: nowrap; position: relative; overflow: hidden;
-      }
-      .btn:hover { transform: scale(1.05); }
-      .btn-secondary {
-        background-color: var(--secondary); color: var(--secondary-foreground);
-        padding: 1rem 2rem; font-size: 1.125rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      }
-      .btn-primary {
-        background-color: var(--primary); color: var(--primary-foreground);
-        padding: 1rem 2rem; font-size: 1.125rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      }
-      .btn-lg { padding: 1.25rem 2.5rem; font-size: 1.25rem; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-      /* ====== CONFETTI CANVAS ====== */
-      .confetti-canvas {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none; z-index: 99998;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-      /* ====== KEYFRAMES ====== */
-      @keyframes scale-in { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
-      @keyframes fade-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes bounce-soft { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-      @keyframes pulse-glow {
-        0%,100% { box-shadow: 0 0 0 0 hsla(46,100%,50%,0.5), 0 4px 20px rgba(0,0,0,0.15); }
-        50% { box-shadow: 0 0 0 18px hsla(46,100%,50%,0), 0 4px 20px rgba(0,0,0,0.15); }
-      }
+    /* ====== BUTTONS ====== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      border: none;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+    }
 
-      /* Shimmer effect */
-      @keyframes shimmer {
-        0% { background-position: -200% center; }
-        100% { background-position: 200% center; }
-      }
-      .shimmer-text {
-        background: linear-gradient(90deg, currentColor 0%, currentColor 15%, var(--gold-light) 35%, currentColor 50%, currentColor 65%, var(--pink) 80%, currentColor 100%);
-        background-size: 300% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmer 32s ease-in-out infinite;
-      }
-      .shimmer-gold {
-        background: linear-gradient(
-  90deg,
-  #000 0%,
-  #000 35%,
-  hsl(194, 93%, 47%) 48%,
-  hsl(194, 93%, 60%) 50%,
-  hsl(194, 93%, 47%) 52%,
-  #000 65%,
-  #000 100%
-);
-        background-size: 300% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmer 36s ease-in-out infinite;
-      }
+    .btn:hover {
+      transform: scale(1.05);
+    }
 
-      /* Morphing blobs */
-      @keyframes morph-blob {
-        0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: rotate(0deg) scale(1); }
-        25% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: rotate(90deg) scale(1.05); }
-        50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: rotate(180deg) scale(0.95); }
-        75% { border-radius: 55% 45% 40% 60% / 35% 65% 35% 65%; transform: rotate(270deg) scale(1.02); }
-        100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: rotate(360deg) scale(1); }
-      }
+    .btn-secondary {
+      background-color: var(--secondary);
+      color: var(--secondary-foreground);
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
 
-      /* Clip-path reveal */
-      @keyframes clip-reveal-circle {
-        from { clip-path: circle(0% at 50% 50%); }
-        to { clip-path: circle(150% at 50% 50%); }
-      }
-      @keyframes clip-reveal-polygon {
-        from { clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); }
-        to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-      }
-      @keyframes clip-reveal-diagonal {
-        from { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
-        to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-lg {
+      padding: 1.25rem 2.5rem;
+      font-size: 1.25rem;
+    }
+
+    /* ====== CONFETTI CANVAS ====== */
+    .confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 99998;
+    }
+
+    /* ====== KEYFRAMES ====== */
+    @keyframes scale-in {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
       }
 
-      .clip-hidden { clip-path: circle(0% at 50% 50%); }
-      .clip-reveal { animation: clip-reveal-circle 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
-      .clip-reveal-poly { animation: clip-reveal-polygon 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
-      .clip-reveal-diag { animation: clip-reveal-diagonal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
-
-      /* Floating sprinkle particles */
-      @keyframes float-sprinkle {
-        0% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
-        50% { opacity: 1; }
-        100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+      to {
+        opacity: 1;
+        transform: scale(1);
       }
+    }
 
-      /* Wave animation */
-      @keyframes wave-move {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
       }
 
-      /* Gradient animation */
-      @keyframes gradient-shift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce-soft {
+
+      0%,
+      100% {
+        transform: translateY(0);
       }
 
-      /* Glow pulse */
-      @keyframes glow-pulse {
-        0%,100% { box-shadow: 0 0 10px var(--gold), 0 0 20px transparent; }
-        50% { box-shadow: 0 0 20px var(--gold), 0 0 40px var(--gold-light); }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 hsla(46, 100%, 50%, 0.5), 0 4px 20px rgba(0, 0, 0, 0.15);
       }
 
-      /* ====== HERO ====== */
-      #hero {
-        position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-        background: linear-gradient(135deg, var(--primary), var(--primary-dark), hsl(210, 80%, 40%));
-        background-size: 300% 300%; animation: gradient-shift 8s ease infinite;
-        overflow: hidden;
+      50% {
+        box-shadow: 0 0 0 18px hsla(46, 100%, 50%, 0), 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    /* Shimmer effect */
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
       }
 
-      #hero-canvas {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none;
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, currentColor 0%, currentColor 15%, var(--gold-light) 35%, currentColor 50%, currentColor 65%, var(--pink) 80%, currentColor 100%);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 32s ease-in-out infinite;
+    }
+
+    .shimmer-gold {
+      background: linear-gradient(90deg,
+          #000 0%,
+          #000 35%,
+          hsl(194, 93%, 47%) 48%,
+          hsl(194, 93%, 60%) 50%,
+          hsl(194, 93%, 47%) 52%,
+          #000 65%,
+          #000 100%);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 36s ease-in-out infinite;
+    }
+
+    /* Morphing blobs */
+    @keyframes morph-blob {
+      0% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: rotate(0deg) scale(1);
       }
 
-      .hero-blob {
-        position: absolute; pointer-events: none; z-index: 1;
-        animation: morph-blob 12s ease-in-out infinite;
-      }
-      .hero-blob-1 {
-        top: -5rem; left: -5rem; width: 24rem; height: 24rem;
-        background: radial-gradient(circle, hsla(340, 100%, 70%, 0.25), hsla(194, 90%, 36%, 0.15));
-        filter: blur(40px);
-      }
-      .hero-blob-2 {
-        bottom: -8rem; right: -5rem; width: 32rem; height: 32rem;
-        background: radial-gradient(circle, hsla(46, 100%, 50%, 0.2), hsla(280, 60%, 65%, 0.1));
-        filter: blur(50px); animation-delay: -4s;
-      }
-      .hero-blob-3 {
-        top: 30%; right: 10%; width: 18rem; height: 18rem;
-        background: radial-gradient(circle, hsla(50, 100%, 60%, 0.2), hsla(340, 80%, 65%, 0.1));
-        filter: blur(45px); animation-delay: -8s;
+      25% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: rotate(90deg) scale(1.05);
       }
 
-      .hero-wave {
-        position: absolute; bottom: 0; left: 0; width: 100%; pointer-events: none; z-index: 3;
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: rotate(180deg) scale(0.95);
       }
 
-      .hero-content {
-        position: relative; z-index: 10; text-align: center;
-        padding: 4rem 1.5rem 9rem; width: 100%; max-width: 860px; margin: 0 auto;
+      75% {
+        border-radius: 55% 45% 40% 60% / 35% 65% 35% 65%;
+        transform: rotate(270deg) scale(1.02);
       }
 
+      100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: rotate(360deg) scale(1);
+      }
+    }
+
+    /* Clip-path reveal */
+    @keyframes clip-reveal-circle {
+      from {
+        clip-path: circle(0% at 50% 50%);
+      }
+
+      to {
+        clip-path: circle(150% at 50% 50%);
+      }
+    }
+
+    @keyframes clip-reveal-polygon {
+      from {
+        clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+      }
+
+      to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    @keyframes clip-reveal-diagonal {
+      from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      }
+
+      to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    .clip-hidden {
+      clip-path: circle(0% at 50% 50%);
+    }
+
+    .clip-reveal {
+      animation: clip-reveal-circle 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+
+    .clip-reveal-poly {
+      animation: clip-reveal-polygon 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+
+    .clip-reveal-diag {
+      animation: clip-reveal-diagonal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+
+    /* Floating sprinkle particles */
+    @keyframes float-sprinkle {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.6;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* Wave animation */
+    @keyframes wave-move {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Gradient animation */
+    @keyframes gradient-shift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Glow pulse */
+    @keyframes glow-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 10px var(--gold), 0 0 20px transparent;
+      }
+
+      50% {
+        box-shadow: 0 0 20px var(--gold), 0 0 40px var(--gold-light);
+      }
+    }
+
+    /* ====== HERO ====== */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark), hsl(210, 80%, 40%));
+      background-size: 300% 300%;
+      animation: gradient-shift 8s ease infinite;
+      overflow: hidden;
+    }
+
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-blob {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+      animation: morph-blob 12s ease-in-out infinite;
+    }
+
+    .hero-blob-1 {
+      top: -5rem;
+      left: -5rem;
+      width: 24rem;
+      height: 24rem;
+      background: radial-gradient(circle, hsla(340, 100%, 70%, 0.25), hsla(194, 90%, 36%, 0.15));
+      filter: blur(40px);
+    }
+
+    .hero-blob-2 {
+      bottom: -8rem;
+      right: -5rem;
+      width: 32rem;
+      height: 32rem;
+      background: radial-gradient(circle, hsla(46, 100%, 50%, 0.2), hsla(280, 60%, 65%, 0.1));
+      filter: blur(50px);
+      animation-delay: -4s;
+    }
+
+    .hero-blob-3 {
+      top: 30%;
+      right: 10%;
+      width: 18rem;
+      height: 18rem;
+      background: radial-gradient(circle, hsla(50, 100%, 60%, 0.2), hsla(340, 80%, 65%, 0.1));
+      filter: blur(45px);
+      animation-delay: -8s;
+    }
+
+    .hero-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 4rem 1.5rem 9rem;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-logo {
+      margin: 0 auto 2rem;
+      width: 12rem;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.18));
+      animation: scale-in 0.8s ease-out both;
+    }
+
+    @media (min-width: 768px) {
       .hero-logo {
-        margin: 0 auto 2rem; width: 12rem;
-        filter: drop-shadow(0 20px 30px rgba(0,0,0,0.18));
-        animation: scale-in 0.8s ease-out both;
+        width: 16rem;
       }
-      @media (min-width: 768px) { .hero-logo { width: 16rem; } }
+    }
 
-      .hero-title {
-        font-family: 'Fredoka One', cursive; font-size: clamp(2rem, 5.5vw, 3.75rem);
-        color: var(--primary-foreground); text-shadow: 0 2px 12px rgba(0,0,0,0.3);
-        margin-bottom: 1rem; line-height: 1.2; min-height: 2.4em;
-      }
+    .hero-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 5.5vw, 3.75rem);
+      color: var(--primary-foreground);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      min-height: 2.4em;
+    }
 
-      .hero-subtitle {
-        font-size: clamp(1rem, 2.5vw, 1.25rem); color: rgba(255,255,255,0.92);
-        max-width: 40rem; margin: 0 auto 2.5rem;
-        animation: fade-in 0.7s ease-out 0.5s both;
-      }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 40rem;
+      margin: 0 auto 2.5rem;
+      animation: fade-in 0.7s ease-out 0.5s both;
+    }
 
-      .hero-cta { animation: fade-in 0.6s ease-out 0.7s both, pulse-glow 2.5s ease-in-out 1.5s infinite; }
+    .hero-cta {
+      animation: fade-in 0.6s ease-out 0.7s both, pulse-glow 2.5s ease-in-out 1.5s infinite;
+    }
 
-      /* Parallax layers */
-      .parallax-layer {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none; z-index: 2;
-      }
-      .parallax-element {
-        position: absolute; font-size: 2rem; opacity: 0.15;
-      }
+    /* Parallax layers */
+    .parallax-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
 
-      /* ====== SECTION TITLES ====== */
-      .section-title {
-        font-family: 'Fredoka One', cursive; font-size: clamp(1.75rem, 4vw, 2.5rem);
-        text-align: center; color: var(--foreground); margin-bottom: 1rem;
-        position: relative; display: inline-block; width: 100%;
-      }
-      .section-title::after {
-        content: ''; display: block; width: 0; height: 4px; border-radius: 2px;
-        background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
-        margin: 0.75rem auto 0; transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      .section-title.revealed::after { width: 80px; }
+    .parallax-element {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.15;
+    }
 
-      .section-subtitle {
-        text-align: center; color: var(--muted-foreground);
-        max-width: 42rem; margin: 0 auto 3.5rem; font-size: 1.0625rem; line-height: 1.7;
-      }
+    /* ====== SECTION TITLES ====== */
+    .section-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      text-align: center;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
 
-      /* ====== ABOUT SECTION ====== */
-      #about {
-        padding: 5rem 0 7rem; background-color: var(--background);
-        position: relative; overflow: hidden;
-      }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+      margin: 0.75rem auto 0;
+      transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
+    .section-title.revealed::after {
+      width: 80px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted-foreground);
+      max-width: 42rem;
+      margin: 0 auto 3.5rem;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    /* ====== ABOUT SECTION ====== */
+    #about {
+      padding: 5rem 0 7rem;
+      background-color: var(--background);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
       .about-grid {
-        display: grid; grid-template-columns: 1fr; gap: 1.75rem;
-        max-width: 56rem; margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
       }
-      @media (min-width: 768px) { .about-grid { grid-template-columns: repeat(3, 1fr); } }
+    }
 
-      .about-card {
-        border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center;
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-        transform-style: preserve-3d; perspective: 600px;
-        clip-path: circle(0% at 50% 50%);
-      }
-      .about-card.revealed { animation: clip-reveal-circle 0.8s ease forwards; }
+    .about-card {
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+      perspective: 600px;
+      clip-path: circle(0% at 50% 50%);
+    }
 
-      .about-card:nth-child(1) {
-        background: linear-gradient(135deg, hsl(340, 90%, 92%), hsl(340, 80%, 85%));
-        border: 2px solid hsl(340, 80%, 75%);
-      }
-      .about-card:nth-child(2) {
-        background: linear-gradient(135deg, hsl(200, 90%, 90%), hsl(200, 80%, 82%));
-        border: 2px solid hsl(200, 80%, 72%);
-      }
-      .about-card:nth-child(3) {
-        background: linear-gradient(135deg, hsl(50, 100%, 88%), hsl(50, 90%, 78%));
-        border: 2px solid hsl(50, 90%, 68%);
-      }
+    .about-card.revealed {
+      animation: clip-reveal-circle 0.8s ease forwards;
+    }
 
-      .about-card:hover {
-        transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      }
+    .about-card:nth-child(1) {
+      background: linear-gradient(135deg, hsl(340, 90%, 92%), hsl(340, 80%, 85%));
+      border: 2px solid hsl(340, 80%, 75%);
+    }
 
-      .about-card-icon { font-size: 3rem; display: block; margin-bottom: 1rem; line-height: 1; }
-      .about-card-title {
-        font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 1.2rem;
-        color: var(--foreground); margin-bottom: 0.5rem;
-      }
-      .about-card-desc { color: var(--muted-foreground); font-size: 0.95rem; }
+    .about-card:nth-child(2) {
+      background: linear-gradient(135deg, hsl(200, 90%, 90%), hsl(200, 80%, 82%));
+      border: 2px solid hsl(200, 80%, 72%);
+    }
 
-      /* ====== SOBRE NÓS ====== */
-      #sobre-nos {
-        padding: 5rem 0 7rem; position: relative; overflow: hidden;
-        background: linear-gradient(135deg, hsl(280, 30%, 95%), hsl(200, 40%, 93%), hsl(340, 30%, 95%));
-      }
+    .about-card:nth-child(3) {
+      background: linear-gradient(135deg, hsl(50, 100%, 88%), hsl(50, 90%, 78%));
+      border: 2px solid hsl(50, 90%, 68%);
+    }
 
-      .sobre-blob {
-        position: absolute; pointer-events: none; z-index: 0;
-        animation: morph-blob 15s ease-in-out infinite;
-      }
-      .sobre-blob-1 {
-        top: -3rem; right: -3rem; width: 16rem; height: 16rem;
-        background: radial-gradient(circle, hsla(280, 60%, 65%, 0.15), transparent);
-        filter: blur(30px);
-      }
-      .sobre-blob-2 {
-        bottom: -2rem; left: -4rem; width: 20rem; height: 20rem;
-        background: radial-gradient(circle, hsla(340, 80%, 65%, 0.1), transparent);
-        filter: blur(35px); animation-delay: -5s;
-      }
+    .about-card:hover {
+      transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
 
+    .about-card-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .about-card-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-card-desc {
+      color: var(--muted-foreground);
+      font-size: 0.95rem;
+    }
+
+    /* ====== SOBRE NÓS ====== */
+    #sobre-nos {
+      padding: 5rem 0 7rem;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, hsl(280, 30%, 95%), hsl(200, 40%, 93%), hsl(340, 30%, 95%));
+    }
+
+    .sobre-blob {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      animation: morph-blob 15s ease-in-out infinite;
+    }
+
+    .sobre-blob-1 {
+      top: -3rem;
+      right: -3rem;
+      width: 16rem;
+      height: 16rem;
+      background: radial-gradient(circle, hsla(280, 60%, 65%, 0.15), transparent);
+      filter: blur(30px);
+    }
+
+    .sobre-blob-2 {
+      bottom: -2rem;
+      left: -4rem;
+      width: 20rem;
+      height: 20rem;
+      background: radial-gradient(circle, hsla(340, 80%, 65%, 0.1), transparent);
+      filter: blur(35px);
+      animation-delay: -5s;
+    }
+
+    .sobre-nos-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "avatar"
+        "mission"
+        "text";
+      gap: 3rem;
+    }
+
+    @media (min-width: 992px) {
       .sobre-nos-grid {
-        display: grid; grid-template-columns: 1fr; gap: 3rem;
-        max-width: 60rem; margin: 0 auto; align-items: center; position: relative; z-index: 1;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "avatar mission"
+          "text   text";
+        gap: 4rem 6rem;
+        /* + respiro horizontal */
+        align-items: center;
       }
-      @media (min-width: 768px) { .sobre-nos-grid { grid-template-columns: 1fr 1fr; } }
+    }
 
-      .sobre-nos-text p { color: var(--muted-foreground); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
-      .sobre-nos-highlight {
-        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-        color: var(--primary-foreground); border-radius: var(--radius); padding: 2.5rem 2rem; text-align: center;
+    .sobre-nos-text {
+      grid-area: text;
+      max-width: 900px;
+      /* leitura confortável */
+      margin: 0 auto;
+    }
+
+    .sobre-nos-text p {
+      color: var(--muted-foreground);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+
+    .sobre-nos-highlight {
+      grid-area: mission;
+      max-width: 480px;
+      margin: 2rem auto 0;
+    }
+
+    .sobre-nos-highlight {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--primary-foreground);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .sobre-nos-highlight-emoji {
+      font-size: 3.5rem;
+      display: flex;
+      margin-bottom: 0.4rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sobre-nos-highlight-emoji img {
+      height: 140px;
+    }
+
+    .sobre-nos-highlight h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sobre-nos-highlight p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.7;
+    }
+
+    .avatar-layout {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 992px) {
+      .avatar-layout {
+        grid-template-columns: 0.8fr 1.2fr 1fr;
+        align-items: center;
       }
-      .sobre-nos-highlight-emoji { font-size: 3.5rem; display: flex; margin-bottom: 0.4rem; align-items: center;justify-content: center;}
-      .sobre-nos-highlight-emoji img{height: 140px;}
-      .sobre-nos-highlight h3 {font-size: 1.5rem; margin-bottom: 0.75rem; }
-      .sobre-nos-highlight p { font-size: 1rem; color: rgba(255,255,255,0.88); line-height: 1.7; }
+    }
 
-      /* ====== DATAS MARCANTES — BRIGADEIRO STYLE ====== */
-      #datas-marcantes {
-        padding: 5rem 0 7rem; position: relative; overflow: hidden;
-        background-color: var(--chocolate);
-        /* Textura de granulado CSS */
-        background-image:
-          radial-gradient(circle 2px at 10% 15%, hsl(30, 50%, 45%) 1px, transparent 2px),
-          radial-gradient(circle 1.5px at 25% 35%, hsl(25, 60%, 35%) 1px, transparent 2px),
-          radial-gradient(circle 2px at 40% 10%, hsl(340, 70%, 55%) 1px, transparent 2px),
-          radial-gradient(circle 1.5px at 55% 45%, hsl(43, 90%, 55%) 1px, transparent 2px),
-          radial-gradient(circle 2px at 70% 20%, hsl(30, 50%, 42%) 1px, transparent 2px),
-          radial-gradient(circle 1.5px at 85% 55%, hsl(340, 60%, 50%) 1px, transparent 2px),
-          radial-gradient(circle 2px at 15% 70%, hsl(43, 80%, 60%) 1px, transparent 2px),
-          radial-gradient(circle 1.5px at 30% 85%, hsl(25, 55%, 38%) 1px, transparent 2px),
-          radial-gradient(circle 2px at 50% 65%, hsl(340, 65%, 52%) 1px, transparent 2px),
-          radial-gradient(circle 1.5px at 65% 80%, hsl(30, 50%, 40%) 1px, transparent 2px),
-          radial-gradient(circle 2px at 80% 75%, hsl(43, 85%, 58%) 1px, transparent 2px),
-          radial-gradient(circle 1.5px at 95% 30%, hsl(340, 75%, 48%) 1px, transparent 2px),
-          radial-gradient(circle 1px at 5% 50%, hsl(25, 50%, 50%) 0.5px, transparent 1px),
-          radial-gradient(circle 1px at 20% 60%, hsl(43, 80%, 65%) 0.5px, transparent 1px),
-          radial-gradient(circle 1px at 45% 30%, hsl(340, 70%, 58%) 0.5px, transparent 1px),
-          radial-gradient(circle 1px at 75% 50%, hsl(30, 45%, 48%) 0.5px, transparent 1px),
-          radial-gradient(circle 1px at 90% 15%, hsl(25, 55%, 42%) 0.5px, transparent 1px),
-          radial-gradient(circle 1px at 35% 90%, hsl(43, 90%, 60%) 0.5px, transparent 1px);
-        background-size: 80px 80px;
+    .sobre-nos-avatar {
+      grid-area: avatar;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sobre-nos-avatar img {
+      max-height: 380px;
+      filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.18));
+      transform-origin: bottom center;
+    }
+
+    /* Balão de fala */
+    .avatar-speech {
+      position: absolute;
+      bottom: 10%;
+      right: -1rem;
+      background: white;
+      padding: 0.9rem 1.1rem;
+      border-radius: 1rem;
+      font-size: 0.9rem;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+      max-width: 180px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .avatar-speech {
+        display: none;
+        /* mobile clean */
       }
+    }
 
-      #datas-marcantes .section-title { color: var(--gold-light); }
-      #datas-marcantes .section-title::after {
-        background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--pink-light));
-      }
-      #datas-marcantes .section-subtitle { color: hsl(30, 30%, 75%); }
+    /* ====== DATAS MARCANTES — BRIGADEIRO STYLE ====== */
+    #datas-marcantes {
+      padding: 5rem 0 7rem;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--chocolate);
+      /* Textura de granulado CSS */
+      background-image:
+        radial-gradient(circle 2px at 10% 15%, hsl(30, 50%, 45%) 1px, transparent 2px),
+        radial-gradient(circle 1.5px at 25% 35%, hsl(25, 60%, 35%) 1px, transparent 2px),
+        radial-gradient(circle 2px at 40% 10%, hsl(340, 70%, 55%) 1px, transparent 2px),
+        radial-gradient(circle 1.5px at 55% 45%, hsl(43, 90%, 55%) 1px, transparent 2px),
+        radial-gradient(circle 2px at 70% 20%, hsl(30, 50%, 42%) 1px, transparent 2px),
+        radial-gradient(circle 1.5px at 85% 55%, hsl(340, 60%, 50%) 1px, transparent 2px),
+        radial-gradient(circle 2px at 15% 70%, hsl(43, 80%, 60%) 1px, transparent 2px),
+        radial-gradient(circle 1.5px at 30% 85%, hsl(25, 55%, 38%) 1px, transparent 2px),
+        radial-gradient(circle 2px at 50% 65%, hsl(340, 65%, 52%) 1px, transparent 2px),
+        radial-gradient(circle 1.5px at 65% 80%, hsl(30, 50%, 40%) 1px, transparent 2px),
+        radial-gradient(circle 2px at 80% 75%, hsl(43, 85%, 58%) 1px, transparent 2px),
+        radial-gradient(circle 1.5px at 95% 30%, hsl(340, 75%, 48%) 1px, transparent 2px),
+        radial-gradient(circle 1px at 5% 50%, hsl(25, 50%, 50%) 0.5px, transparent 1px),
+        radial-gradient(circle 1px at 20% 60%, hsl(43, 80%, 65%) 0.5px, transparent 1px),
+        radial-gradient(circle 1px at 45% 30%, hsl(340, 70%, 58%) 0.5px, transparent 1px),
+        radial-gradient(circle 1px at 75% 50%, hsl(30, 45%, 48%) 0.5px, transparent 1px),
+        radial-gradient(circle 1px at 90% 15%, hsl(25, 55%, 42%) 0.5px, transparent 1px),
+        radial-gradient(circle 1px at 35% 90%, hsl(43, 90%, 60%) 0.5px, transparent 1px);
+      background-size: 80px 80px;
+    }
 
-      /* Floating sprinkle particles */
-      .sprinkle {
-        position: absolute; width: 4px; height: 12px; border-radius: 3px;
-        opacity: 0; pointer-events: none; z-index: 1;
-      }
+    #datas-marcantes .section-title {
+      color: var(--gold-light);
+    }
 
+    #datas-marcantes .section-title::after {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--pink-light));
+    }
+
+    #datas-marcantes .section-subtitle {
+      color: hsl(30, 30%, 75%);
+    }
+
+    /* Floating sprinkle particles */
+    .sprinkle {
+      position: absolute;
+      width: 4px;
+      height: 12px;
+      border-radius: 3px;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .datas-marcantes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      max-width: 64rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 580px) {
       .datas-marcantes-grid {
-        display: grid; grid-template-columns: 1fr; gap: 1.75rem;
-        max-width: 64rem; margin: 0 auto; position: relative; z-index: 2;
+        grid-template-columns: repeat(2, 1fr);
       }
-      @media (min-width: 580px) { .datas-marcantes-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (min-width: 900px) { .datas-marcantes-grid { grid-template-columns: repeat(4, 1fr); } }
+    }
 
-      .data-card {
-        background: linear-gradient(145deg, hsl(30, 40%, 92%), hsl(35, 45%, 85%));
-        border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 2px solid var(--gold);
-        clip-path: circle(0% at 50% 50%);
+    @media (min-width: 900px) {
+      .datas-marcantes-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
-      .data-card.revealed { animation: clip-reveal-circle 0.8s ease forwards; }
-      .data-card:hover {
-        transform: translateY(-6px) scale(1.03);
-        box-shadow: 0 16px 40px rgba(0,0,0,0.25);
-        border-color: var(--gold-light);
-      }
+    }
 
-      .data-card-emoji { font-size: 3rem; display: block; margin-bottom: 0.75rem; line-height: 1; }
-      .data-card-title {
-        font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.15rem;
-        color: var(--chocolate); margin-bottom: 0.4rem;
-      }
-      .data-card-desc { color: var(--chocolate-light); font-size: 0.9rem; line-height: 1.6; }
+    .data-card {
+      background: linear-gradient(145deg, hsl(30, 40%, 92%), hsl(35, 45%, 85%));
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid var(--gold);
+      clip-path: circle(0% at 50% 50%);
+    }
 
-      .datas-marcantes-quote {
-        max-width: 42rem; margin: 3rem auto 0; text-align: center;
-        font-family: 'Fredoka One', cursive; font-size: clamp(1.25rem, 3vw, 1.75rem);
-        line-height: 1.4; position: relative; z-index: 2;
-      }
+    .data-card.revealed {
+      animation: clip-reveal-circle 0.8s ease forwards;
+    }
 
-      /* ====== PRODUCTS ====== */
-      #products {
-        padding: 5rem 0 7rem;
-        background: linear-gradient(135deg, hsl(280, 30%, 95%), hsl(340, 25%, 93%), hsl(50, 40%, 93%));
-        position: relative; overflow: hidden;
-      }
+    .data-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      border-color: var(--gold-light);
+    }
 
+    .data-card-emoji {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+
+    .data-card-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--chocolate);
+      margin-bottom: 0.4rem;
+    }
+
+    .data-card-desc {
+      color: var(--chocolate-light);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .datas-marcantes-quote {
+      max-width: 42rem;
+      margin: 3rem auto 0;
+      text-align: center;
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      line-height: 1.4;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ====== PRODUCTS ====== */
+    #products {
+      padding: 5rem 0 7rem;
+      background: linear-gradient(135deg, hsl(280, 30%, 95%), hsl(340, 25%, 93%), hsl(50, 40%, 93%));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 80rem;
+      margin: 0 auto 3rem;
+    }
+
+    @media (min-width: 580px) {
       .products-grid {
-        display: grid; grid-template-columns: 1fr; gap: 1.5rem;
-        max-width: 80rem; margin: 0 auto 3rem;
+        grid-template-columns: repeat(2, 1fr);
       }
-      @media (min-width: 580px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(4, 1fr); } }
+    }
 
-      .product-card {
-        border-radius: var(--radius); overflow: hidden;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-        cursor: pointer; perspective: 800px;
-        clip-path: circle(0% at 50% 50%);
+    @media (min-width: 1024px) {
+      .products-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
-      .product-card.revealed { animation: clip-reveal-circle 0.8s ease forwards; }
+    }
 
-      .product-card:nth-child(1) { background: linear-gradient(145deg, hsl(25, 60%, 88%), hsl(25, 50%, 80%)); }
-      .product-card:nth-child(2) { background: linear-gradient(145deg, hsl(340, 80%, 90%), hsl(340, 70%, 82%)); }
-      .product-card:nth-child(3) { background: linear-gradient(145deg, hsl(200, 80%, 88%), hsl(200, 70%, 80%)); }
-      .product-card:nth-child(4) { background: linear-gradient(145deg, hsl(50, 90%, 88%), hsl(50, 80%, 78%)); }
+    .product-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      perspective: 800px;
+      clip-path: circle(0% at 50% 50%);
+    }
 
-      .product-card:hover {
-        transform: translateY(-8px) rotateY(3deg) rotateX(-2deg);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+    .product-card.revealed {
+      animation: clip-reveal-circle 0.8s ease forwards;
+    }
+
+    .product-card:nth-child(1) {
+      background: linear-gradient(145deg, hsl(25, 60%, 88%), hsl(25, 50%, 80%));
+    }
+
+    .product-card:nth-child(2) {
+      background: linear-gradient(145deg, hsl(340, 80%, 90%), hsl(340, 70%, 82%));
+    }
+
+    .product-card:nth-child(3) {
+      background: linear-gradient(145deg, hsl(200, 80%, 88%), hsl(200, 70%, 80%));
+    }
+
+    .product-card:nth-child(4) {
+      background: linear-gradient(145deg, hsl(50, 90%, 88%), hsl(50, 80%, 78%));
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px) rotateY(3deg) rotateX(-2deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .product-card-img-wrapper {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+
+    .product-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-card-img {
+      transform: scale(1.1);
+    }
+
+    .product-card-body {
+      padding: 1.25rem;
+    }
+
+    .product-card-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--foreground);
+      margin-bottom: 0.3rem;
+    }
+
+    .product-card-desc {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+    }
+
+    .products-cta {
+      text-align: center;
+    }
+
+    /* Emoji placeholders for products */
+    .product-emoji-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+
+    /* ====== EXPERIENCE ====== */
+    #experience {
+      padding: 5rem 0 7rem;
+      color: var(--primary-foreground);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-dark), hsl(280, 50%, 35%), hsl(340, 60%, 45%), var(--primary));
+      background-size: 400% 400%;
+      animation: gradient-shift 10s ease infinite;
+    }
+
+    /* Magic particles container */
+    #experience-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .magic-particle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float-particle linear infinite;
+    }
+
+    @keyframes float-particle {
+      0% {
+        transform: translateY(100%) scale(0);
+        opacity: 0;
       }
 
-      .product-card-img-wrapper {
-        aspect-ratio: 1 / 1; overflow: hidden; transform-style: preserve-3d;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 5rem;
-      }
-      .product-card-img {
-        width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;
-      }
-      .product-card:hover .product-card-img { transform: scale(1.1); }
-
-      .product-card-body { padding: 1.25rem; }
-      .product-card-title {
-        font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 1.1rem;
-        color: var(--foreground); margin-bottom: 0.3rem;
-      }
-      .product-card-desc { color: var(--muted-foreground); font-size: 0.875rem; }
-      .products-cta { text-align: center; }
-
-      /* Emoji placeholders for products */
-      .product-emoji-placeholder {
-        width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
-        font-size: 5rem;
+      10% {
+        opacity: 1;
       }
 
-      /* ====== EXPERIENCE ====== */
-      #experience {
-        padding: 5rem 0 7rem; color: var(--primary-foreground); position: relative; overflow: hidden;
-        background: linear-gradient(135deg, var(--primary-dark), hsl(280, 50%, 35%), hsl(340, 60%, 45%), var(--primary));
-        background-size: 400% 400%; animation: gradient-shift 10s ease infinite;
+      90% {
+        opacity: 0.8;
       }
 
-      /* Magic particles container */
-      #experience-particles {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none; z-index: 1;
+      100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
       }
-      .magic-particle {
-        position: absolute; border-radius: 50%; pointer-events: none;
-        animation: float-particle linear infinite;
-      }
-      @keyframes float-particle {
-        0% { transform: translateY(100%) scale(0); opacity: 0; }
-        10% { opacity: 1; }
-        90% { opacity: 0.8; }
-        100% { transform: translateY(-100vh) scale(1); opacity: 0; }
-      }
+    }
 
-      .experience-inner {
-        max-width: 48rem; margin: 0 auto; text-align: center; position: relative; z-index: 2;
-      }
-      .experience-title {
-        font-family: 'Fredoka One', cursive; font-size: clamp(1.75rem, 4vw, 2.5rem);
-        color: var(--primary-foreground); margin-bottom: 1rem; line-height: 1.25;
-      }
-      .experience-subtitle {
-        font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.82); margin-bottom: 2.5rem;
-      }
-      .experience-cta { animation: pulse-glow 2.5s ease-in-out infinite; }
+    .experience-inner {
+      max-width: 48rem;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
 
-      /* ====== LOCATION ====== */
-      #location {
-        padding: 5rem 0 7rem; background-color: var(--background); position: relative; overflow: hidden;
-      }
-      .map-wrapper {
-        max-width: 56rem; margin: 0 auto 2.5rem; border-radius: var(--radius);
-        overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.14);
-      }
-      .map-wrapper iframe { display: block; width: 100%; border: none; }
+    .experience-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      color: var(--primary-foreground);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .experience-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 2.5rem;
+    }
+
+    .experience-cta {
+      animation: pulse-glow 2.5s ease-in-out infinite;
+    }
+
+    /* ====== LOCATION ====== */
+    #location {
+      padding: 5rem 0 7rem;
+      background-color: var(--background);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-wrapper {
+      max-width: 56rem;
+      margin: 0 auto 2.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.14);
+    }
+
+    .map-wrapper iframe {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+
+    .location-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 580px) {
       .location-buttons {
-        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
+        flex-direction: row;
       }
-      @media (min-width: 580px) { .location-buttons { flex-direction: row; } }
+    }
 
-      .btn-glow { animation: glow-pulse 2s ease-in-out infinite; }
+    .btn-glow {
+      animation: glow-pulse 2s ease-in-out infinite;
+    }
 
-      /* ====== FOOTER ====== */
-      #footer {
-        padding: 3.5rem 0; position: relative; overflow: hidden;
-        background: linear-gradient(135deg, var(--primary), hsl(280, 50%, 40%), hsl(340, 60%, 50%));
-      }
+    /* ====== FOOTER ====== */
+    #footer {
+      padding: 3.5rem 0;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary), hsl(280, 50%, 40%), hsl(340, 60%, 50%));
+    }
 
-      .footer-wave {
-        position: absolute; top: -1px; left: 0; width: 200%; height: 60px;
-        pointer-events: none; animation: wave-move 8s linear infinite;
-      }
+    .footer-wave {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 200%;
+      height: 60px;
+      pointer-events: none;
+      animation: wave-move 8s linear infinite;
+    }
 
-      .footer-inner { text-align: center; position: relative; z-index: 1; }
-      .footer-logo {
-        margin: 0 auto 1.5rem; width: 8rem;
-        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
-      }
-      .footer-tagline { color: rgba(255,255,255,0.85); font-size: 1.0625rem; margin-bottom: 2rem; }
+    .footer-inner {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
 
-      /* ====== FLOATING WHATSAPP ====== */
-      .floating-whatsapp {
-        position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;
-        background-color: var(--whatsapp-green); color: #fff;
-        width: 3.5rem; height: 3.5rem; border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 4px 20px rgba(37,211,102,0.5);
-        animation: bounce-soft 2s ease-in-out infinite;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;
-      }
-      .floating-whatsapp:hover {
-        animation: none; transform: scale(1.15);
-        box-shadow: 0 8px 32px rgba(37,211,102,0.65);
-      }
-      .floating-whatsapp svg { width: 1.75rem; height: 1.75rem; }
-      .floating-whatsapp::before {
-        content: 'Fale conosco!'; position: absolute; right: 4.5rem; top: 50%;
-        transform: translateY(-50%) translateX(10px);
-        background: #fff; color: var(--foreground); font-family: 'Nunito', sans-serif;
-        font-weight: 700; font-size: 0.85rem; padding: 0.5rem 1rem; border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.12); white-space: nowrap;
-        opacity: 0; pointer-events: none; transition: opacity 0.3s, transform 0.3s;
-      }
-      .floating-whatsapp:hover::before { opacity: 1; transform: translateY(-50%) translateX(0); }
+    .footer-logo {
+      margin: 0 auto 1.5rem;
+      width: 8rem;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+    }
 
-      /* ====== CTA GLOW ====== */
-      .cta-glow { position: relative; }
-      .cta-glow::after {
-        content: ''; position: absolute; inset: -4px; border-radius: 9999px;
-        background: linear-gradient(135deg, hsla(46,100%,50%,0.4), hsla(340,100%,70%,0.3), hsla(194,93%,47%,0.4));
-        z-index: -1; filter: blur(16px); opacity: 0; transition: opacity 0.4s ease;
-      }
-      .cta-glow:hover::after { opacity: 1; }
+    .footer-tagline {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.0625rem;
+      margin-bottom: 2rem;
+    }
 
-      /* Ripple */
-      .ripple {
-        position: absolute; border-radius: 50%; background: rgba(255,255,255,0.35);
-        transform: scale(0); animation: ripple-effect 0.6s ease-out; pointer-events: none;
-      }
-      @keyframes ripple-effect { to { transform: scale(4); opacity: 0; } }
+    /* ====== FLOATING WHATSAPP ====== */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9999;
+      background-color: var(--whatsapp-green);
+      color: #fff;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      animation: bounce-soft 2s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
 
-      /* Cursor dot */
+    .floating-whatsapp:hover {
+      animation: none;
+      transform: scale(1.15);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.65);
+    }
+
+    .floating-whatsapp svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    .floating-whatsapp::before {
+      content: 'Fale conosco!';
+      position: absolute;
+      right: 4.5rem;
+      top: 50%;
+      transform: translateY(-50%) translateX(10px);
+      background: #fff;
+      color: var(--foreground);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .floating-whatsapp:hover::before {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    /* ====== CTA GLOW ====== */
+    .cta-glow {
+      position: relative;
+    }
+
+    .cta-glow::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, hsla(46, 100%, 50%, 0.4), hsla(340, 100%, 70%, 0.3), hsla(194, 93%, 47%, 0.4));
+      z-index: -1;
+      filter: blur(16px);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .cta-glow:hover::after {
+      opacity: 1;
+    }
+
+    /* Ripple */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      transform: scale(0);
+      animation: ripple-effect 0.6s ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes ripple-effect {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* Cursor dot */
+    .cursor-dot {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99999;
+      opacity: 0;
+      mix-blend-mode: multiply;
+      transition: opacity 0.3s;
+    }
+
+    @media (hover: none) {
       .cursor-dot {
-        position: fixed; width: 8px; height: 8px; background: var(--primary);
-        border-radius: 50%; pointer-events: none; z-index: 99999;
-        opacity: 0; mix-blend-mode: multiply; transition: opacity 0.3s;
+        display: none !important;
       }
-      @media (hover: none) { .cursor-dot { display: none !important; } }
+    }
 
-      /* Scroll progress bar */
-      .scroll-progress {
-        position: fixed; top: 0; left: 0; height: 3px;
-        background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--purple-candy));
-        z-index: 99999; width: 0; transition: none;
-      }
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--purple-candy));
+      z-index: 99999;
+      width: 0;
+      transition: none;
+    }
 
-      /* Floating candy */
-      .floating-candy {
-        position: absolute; font-size: 2rem; pointer-events: none; opacity: 0.15; z-index: 1;
-      }
-    </style>
+    /* Floating candy */
+    .floating-candy {
+      position: absolute;
+      font-size: 2rem;
+      pointer-events: none;
+      opacity: 0.15;
+      z-index: 1;
+    }
+  </style>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
 
-  <body>
-    <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
-    <div class="scroll-progress" id="scrollProgress"></div>
+<body>
+  <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- ======== HERO ======== -->
-    <section id="hero">
-      <canvas id="hero-canvas"></canvas>
-      <div class="hero-blob hero-blob-1"></div>
-      <div class="hero-blob hero-blob-2"></div>
-      <div class="hero-blob hero-blob-3"></div>
+  <!-- ======== HERO ======== -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
 
-      <!-- Parallax layers -->
-      <div class="parallax-layer" id="parallax-layer-1"></div>
-      <div class="parallax-layer" id="parallax-layer-2"></div>
+    <!-- Parallax layers -->
+    <div class="parallax-layer" id="parallax-layer-1"></div>
+    <div class="parallax-layer" id="parallax-layer-2"></div>
 
-      <svg class="hero-wave" viewBox="0 0 1440 120" fill="none" aria-hidden="true">
-        <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H0Z" fill="white" />
-      </svg>
+    <svg class="hero-wave" viewBox="0 0 1440 120" fill="none" aria-hidden="true">
+      <path
+        d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H0Z"
+        fill="white" />
+    </svg>
 
-      <div class="container">
-        <div class="hero-content">
-          <img src="assets/logo.png" alt="Sonho Meu Bomboniere" class="hero-logo" />
-          <h1 class="hero-title" id="scramble-title"></h1>
-          <p class="hero-subtitle shimmer-text">
-            Doces, embalagens, chocolates e tudo para transformar momentos em comemoração.
+    <div class="container">
+      <div class="hero-content">
+        <img src="assets/logo.png" alt="Sonho Meu Bomboniere" class="hero-logo" />
+        <h1 class="hero-title" id="scramble-title"></h1>
+        <p class="hero-subtitle shimmer-text">
+          Doces, embalagens, chocolates e tudo para transformar momentos em comemoração.
+        </p>
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+          target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg hero-cta cta-glow" data-confetti>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Comprar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title shimmer-text">Mais do que uma bomboniere, um lugar de alegria</h2>
+      <p class="section-subtitle">Somos especialistas em festas e datas comemorativas. Aqui você encontra variedade,
+        praticidade e um atendimento que faz você se sentir em casa.</p>
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="about-card-icon">🎈</span>
+          <h3 class="about-card-title shimmer-text">Variedade</h3>
+          <p class="about-card-desc">Tudo o que você precisa em um só lugar</p>
+        </div>
+        <div class="about-card">
+          <span class="about-card-icon">🍬</span>
+          <h3 class="about-card-title shimmer-text">Qualidade</h3>
+          <p class="about-card-desc">Produtos selecionados com carinho</p>
+        </div>
+        <div class="about-card">
+          <span class="about-card-icon">💛</span>
+          <h3 class="about-card-title shimmer-text">Atendimento próximo</h3>
+          <p class="about-card-desc">A gente te ajuda a montar sua festa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SOBRE NÓS ======== -->
+  <section id="sobre-nos">
+    <div class="sobre-blob sobre-blob-1"></div>
+    <div class="sobre-blob sobre-blob-2"></div>
+    <div class="container">
+      <h2 class="section-title shimmer-text">Sobre Nós</h2>
+      <p class="section-subtitle">Conheça a história por trás de cada doce e de cada sorriso.</p>
+      <div class="sobre-nos-grid">
+        <div class="sobre-nos-avatar">
+          <img src="assets/avatar-sonho-meu.png" alt="Mascote Sonho Meu">
+          <span class="avatar-speech">
+            Prazer! 💛<br>
+            Aqui cada doce tem uma história.
+          </span>
+        </div>
+
+        <div class="sobre-nos-highlight">
+          <span class="sobre-nos-highlight-emoji">
+            <img src="assets/logo.png" alt="">
+          </span>
+          <h3>Nossa Missão</h3>
+          <p>
+            Transformar cada comemoração em um momento mágico, oferecendo produtos
+            de qualidade, variedade e um atendimento acolhedor.
           </p>
-          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg hero-cta cta-glow" data-confetti>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Comprar pelo WhatsApp
-          </a>
+        </div>
+
+        <div class="sobre-nos-text">
+          <p>A <strong>Sonho Meu Bomboniere</strong> nasceu de um sonho simples: levar alegria para cada comemoração. Há
+            anos atendemos famílias, festeiros e apaixonados por doces com carinho, dedicação e aquele atendimento de
+            quem realmente se importa.</p>
+          <p>Acreditamos que cada festa merece ser especial e cada detalhe conta. Por isso, selecionamos os melhores
+            produtos — de chocolates artesanais a embalagens encantadoras — para que sua celebração seja inesquecível.
+          </p>
+          <p>Mais do que uma loja, somos parceiros dos seus melhores momentos. 💛</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ======== ABOUT ======== -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title shimmer-text">Mais do que uma bomboniere, um lugar de alegria</h2>
-        <p class="section-subtitle">Somos especialistas em festas e datas comemorativas. Aqui você encontra variedade, praticidade e um atendimento que faz você se sentir em casa.</p>
-        <div class="about-grid">
-          <div class="about-card">
-            <span class="about-card-icon">🎈</span>
-            <h3 class="about-card-title shimmer-text">Variedade</h3>
-            <p class="about-card-desc">Tudo o que você precisa em um só lugar</p>
+  <!-- ======== DATAS MARCANTES ======== -->
+  <section id="datas-marcantes">
+    <canvas id="brigadeiro-particles"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:auto;"></canvas>
+    <div class="container" style="position:relative;z-index:2;">
+      <h2 class="section-title shimmer-gold">Cada data merece ser celebrada ✨</h2>
+      <p class="section-subtitle">Datas marcantes são mais do que números no calendário — são oportunidades de criar
+        memórias, reunir quem amamos e espalhar felicidade.</p>
+      <div class="datas-marcantes-grid">
+        <div class="data-card">
+          <span class="data-card-emoji">🎂</span>
+          <h3 class="data-card-title shimmer-gold">Aniversários</h3>
+          <p class="data-card-desc">Cada ano vivido merece uma festa à altura. A alegria de soprar as velinhas é
+            insubstituível!</p>
+        </div>
+        <div class="data-card">
+          <span class="data-card-emoji">🎄</span>
+          <h3 class="data-card-title shimmer-gold">Natal & Ano Novo</h3>
+          <p class="data-card-desc">Época de gratidão, presentes e doces que aquecem o coração de toda a família.</p>
+        </div>
+        <div class="data-card">
+          <span class="data-card-emoji">🐣</span>
+          <h3 class="data-card-title shimmer-gold">Páscoa</h3>
+          <p class="data-card-desc">Chocolate e carinho andam juntos. Faça dessa Páscoa a mais doce de todas.</p>
+        </div>
+        <div class="data-card">
+          <span class="data-card-emoji">🎓</span>
+          <h3 class="data-card-title shimmer-gold">Formaturas & Conquistas</h3>
+          <p class="data-card-desc">Toda conquista merece celebração. Brinde suas vitórias com quem você ama.</p>
+        </div>
+      </div>
+      <p class="datas-marcantes-quote shimmer-gold">"A felicidade está nos detalhes de cada comemoração — e a gente
+        cuida de cada um deles pra você." 🎉</p>
+    </div>
+  </section>
+
+  <!-- ======== PRODUCTS ======== -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title shimmer-text">Aqui você encontra tudo para comemorar</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-card-img-wrapper">
+            <img src="assets/chocolates.jpg" alt="Chocolates" class="product-card-img" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🍫</div>'" />
           </div>
-          <div class="about-card">
-            <span class="about-card-icon">🍬</span>
-            <h3 class="about-card-title shimmer-text">Qualidade</h3>
-            <p class="about-card-desc">Produtos selecionados com carinho</p>
+          <div class="product-card-body">
+            <h3 class="product-card-title">Chocolates</h3>
+            <p class="product-card-desc">Bombons, barras e trufas irresistíveis</p>
           </div>
-          <div class="about-card">
-            <span class="about-card-icon">💛</span>
-            <h3 class="about-card-title shimmer-text">Atendimento próximo</h3>
-            <p class="about-card-desc">A gente te ajuda a montar sua festa</p>
+        </div>
+        <div class="product-card">
+          <div class="product-card-img-wrapper">
+            <img src="assets/balas-doces.jpg" alt="Doces e Guloseimas" class="product-card-img" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🍬</div>'" />
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-title">Doces e Guloseimas</h3>
+            <p class="product-card-desc">Gomas, pirulitos e muito mais sabor</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card-img-wrapper">
+            <img src="assets/festas.jpg" alt="Produtos para Festas" class="product-card-img" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🎈</div>'" />
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-title">Produtos para Festas</h3>
+            <p class="product-card-desc">Balões, decoração e tudo para o dia</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card-img-wrapper">
+            <img src="assets/embalagens.jpg" alt="Embalagens e Lembrancinhas" class="product-card-img" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🎁</div>'" />
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-title">Embalagens e Lembrancinhas</h3>
+            <p class="product-card-desc">Aquele toque especial no presente</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ======== SOBRE NÓS ======== -->
-    <section id="sobre-nos">
-      <div class="sobre-blob sobre-blob-1"></div>
-      <div class="sobre-blob sobre-blob-2"></div>
-      <div class="container">
-        <h2 class="section-title shimmer-text">Sobre Nós</h2>
-        <p class="section-subtitle">Conheça a história por trás de cada doce e de cada sorriso.</p>
-        <div class="sobre-nos-grid">
-          <div class="sobre-nos-text">
-            <p>A <strong>Sonho Meu Bomboniere</strong> nasceu de um sonho simples: levar alegria para cada comemoração. Há anos atendemos famílias, festeiros e apaixonados por doces com carinho, dedicação e aquele atendimento de quem realmente se importa.</p>
-            <p>Acreditamos que cada festa merece ser especial e cada detalhe conta. Por isso, selecionamos os melhores produtos — de chocolates artesanais a embalagens encantadoras — para que sua celebração seja inesquecível.</p>
-            <p>Mais do que uma loja, somos parceiros dos seus melhores momentos. 💛</p>
-          </div>
-          <div class="sobre-nos-highlight">
-            <span class="sobre-nos-highlight-emoji"><img src="assets/logo.png" alt=""></span>
-            <h3>Nossa Missão</h3>
-            <p>Transformar cada comemoração em um momento mágico, oferecendo produtos de qualidade, variedade e um atendimento acolhedor.</p>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <!-- ======== EXPERIENCE ======== -->
+  <section id="experience">
+    <div id="experience-particles"></div>
+    <div class="container">
+      <div class="experience-inner">
+        <h2 class="experience-title shimmer-text">Aniversário, data especial ou só vontade de adoçar o dia?</h2>
+        <p class="experience-subtitle">A gente te ajuda a escolher tudo, sem complicação.</p>
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+          target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg experience-cta cta-glow"
+          data-confetti>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Falar agora no WhatsApp
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ======== DATAS MARCANTES ======== -->
-    <section id="datas-marcantes">
-      <canvas id="brigadeiro-particles" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:auto;"></canvas>
-      <div class="container" style="position:relative;z-index:2;">
-        <h2 class="section-title shimmer-gold">Cada data merece ser celebrada ✨</h2>
-        <p class="section-subtitle">Datas marcantes são mais do que números no calendário — são oportunidades de criar memórias, reunir quem amamos e espalhar felicidade.</p>
-        <div class="datas-marcantes-grid">
-          <div class="data-card">
-            <span class="data-card-emoji">🎂</span>
-            <h3 class="data-card-title shimmer-gold">Aniversários</h3>
-            <p class="data-card-desc">Cada ano vivido merece uma festa à altura. A alegria de soprar as velinhas é insubstituível!</p>
-          </div>
-          <div class="data-card">
-            <span class="data-card-emoji">🎄</span>
-            <h3 class="data-card-title shimmer-gold">Natal & Ano Novo</h3>
-            <p class="data-card-desc">Época de gratidão, presentes e doces que aquecem o coração de toda a família.</p>
-          </div>
-          <div class="data-card">
-            <span class="data-card-emoji">🐣</span>
-            <h3 class="data-card-title shimmer-gold">Páscoa</h3>
-            <p class="data-card-desc">Chocolate e carinho andam juntos. Faça dessa Páscoa a mais doce de todas.</p>
-          </div>
-          <div class="data-card">
-            <span class="data-card-emoji">🎓</span>
-            <h3 class="data-card-title shimmer-gold">Formaturas & Conquistas</h3>
-            <p class="data-card-desc">Toda conquista merece celebração. Brinde suas vitórias com quem você ama.</p>
-          </div>
-        </div>
-        <p class="datas-marcantes-quote shimmer-gold">"A felicidade está nos detalhes de cada comemoração — e a gente cuida de cada um deles pra você." 🎉</p>
+  <!-- ======== LOCATION ======== -->
+  <section id="location">
+    <div class="container">
+      <h2 class="section-title shimmer-text">Estamos pertinho de você</h2>
+      <p class="section-subtitle">Prefere escolher pessoalmente? Vem visitar a Sonho Meu.</p>
+      <div class="map-wrapper">
+        <iframe title="Localização Sonho Meu Bomboniere"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0!2d-46.63!3d-23.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAwLjAiUyA0NsKwMzcnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
+          height="380" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </section>
+      <div class="location-buttons">
+        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow">Ver
+          rota no Google Maps</a>
 
-    <!-- ======== PRODUCTS ======== -->
-    <section id="products">
-      <div class="container">
-        <h2 class="section-title shimmer-text">Aqui você encontra tudo para comemorar</h2>
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-card-img-wrapper">
-              <img src="assets/chocolates.jpg" alt="Chocolates" class="product-card-img" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🍫</div>'" />
-            </div>
-            <div class="product-card-body">
-              <h3 class="product-card-title">Chocolates</h3>
-              <p class="product-card-desc">Bombons, barras e trufas irresistíveis</p>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-card-img-wrapper">
-              <img src="assets/balas-doces.jpg" alt="Doces e Guloseimas" class="product-card-img" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🍬</div>'" />
-            </div>
-            <div class="product-card-body">
-              <h3 class="product-card-title">Doces e Guloseimas</h3>
-              <p class="product-card-desc">Gomas, pirulitos e muito mais sabor</p>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-card-img-wrapper">
-              <img src="assets/festas.jpg" alt="Produtos para Festas" class="product-card-img" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🎈</div>'" />
-            </div>
-            <div class="product-card-body">
-              <h3 class="product-card-title">Produtos para Festas</h3>
-              <p class="product-card-desc">Balões, decoração e tudo para o dia</p>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-card-img-wrapper">
-              <img src="assets/embalagens.jpg" alt="Embalagens e Lembrancinhas" class="product-card-img" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=product-emoji-placeholder>🎁</div>'" />
-            </div>
-            <div class="product-card-body">
-              <h3 class="product-card-title">Embalagens e Lembrancinhas</h3>
-              <p class="product-card-desc">Aquele toque especial no presente</p>
-            </div>
-          </div>
-        </div>
-        
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ======== EXPERIENCE ======== -->
-    <section id="experience">
-      <div id="experience-particles"></div>
-      <div class="container">
-        <div class="experience-inner">
-          <h2 class="experience-title shimmer-text">Aniversário, data especial ou só vontade de adoçar o dia?</h2>
-          <p class="experience-subtitle">A gente te ajuda a escolher tudo, sem complicação.</p>
-          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg experience-cta cta-glow" data-confetti>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Falar agora no WhatsApp
-          </a>
-        </div>
+  <!-- ======== FOOTER ======== -->
+  <footer id="footer">
+    <svg class="footer-wave" viewBox="0 0 2880 60" fill="none" aria-hidden="true">
+      <path d="M0 30C240 10 480 50 720 30C960 10 1200 50 1440 30C1680 10 1920 50 2160 30C2400 10 2640 50 2880 30V0H0Z"
+        fill="white" opacity="0.1" />
+    </svg>
+    <div class="container">
+      <div class="footer-inner">
+        <img src="assets/logo.png" alt="Sonho Meu Bomboniere" class="footer-logo" />
+        <p class="footer-tagline">Sonho Meu Bomboniere — onde cada comemoração ganha vida.</p>
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+          target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg cta-glow" data-confetti>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Chamar no WhatsApp agora
+        </a>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- ======== LOCATION ======== -->
-    <section id="location">
-      <div class="container">
-        <h2 class="section-title shimmer-text">Estamos pertinho de você</h2>
-        <p class="section-subtitle">Prefere escolher pessoalmente? Vem visitar a Sonho Meu.</p>
-        <div class="map-wrapper">
-          <iframe title="Localização Sonho Meu Bomboniere" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0!2d-46.63!3d-23.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAwLjAiUyA0NsKwMzcnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1" height="380" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="location-buttons">
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow">Ver rota no Google Maps</a>
-          
-        </div>
-      </div>
-    </section>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!"
+    target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
 
-    <!-- ======== FOOTER ======== -->
-    <footer id="footer">
-      <svg class="footer-wave" viewBox="0 0 2880 60" fill="none" aria-hidden="true">
-        <path d="M0 30C240 10 480 50 720 30C960 10 1200 50 1440 30C1680 10 1920 50 2160 30C2400 10 2640 50 2880 30V0H0Z" fill="white" opacity="0.1"/>
-      </svg>
-      <div class="container">
-        <div class="footer-inner">
-          <img src="assets/logo.png" alt="Sonho Meu Bomboniere" class="footer-logo" />
-          <p class="footer-tagline">Sonho Meu Bomboniere — onde cada comemoração ganha vida.</p>
-          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg cta-glow" data-confetti>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Chamar no WhatsApp agora
-          </a>
-        </div>
-      </div>
-    </footer>
+  <div class="cursor-dot" id="cursorDot"></div>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos%20da%20Sonho%20Meu%20Bomboniere!" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Falar no WhatsApp">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) gsap.globalTimeline.timeScale(0);
 
-    <div class="cursor-dot" id="cursorDot"></div>
+    // ═══════════════════════════════════════════════
+    // 1. HERO CANVAS PARTICLE SYSTEM
+    // ═══════════════════════════════════════════════
+    (function () {
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      const shapes = ['circle', 'star', 'square', 'triangle'];
+      const colors = ['#FF6B9D', '#FFD700', '#0AAFE6', '#A855F7', '#FF4500', '#00E676', '#FF69B4', '#FFA500'];
 
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) gsap.globalTimeline.timeScale(0);
+      function resize() {
+        canvas.width = canvas.parentElement.offsetWidth;
+        canvas.height = canvas.parentElement.offsetHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
 
-      // ═══════════════════════════════════════════════
-      // 1. HERO CANVAS PARTICLE SYSTEM
-      // ═══════════════════════════════════════════════
-      (function() {
-        const canvas = document.getElementById('hero-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        const shapes = ['circle', 'star', 'square', 'triangle'];
-        const colors = ['#FF6B9D', '#FFD700', '#0AAFE6', '#A855F7', '#FF4500', '#00E676', '#FF69B4', '#FFA500'];
+      function createParticle() {
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: 3 + Math.random() * 8,
+          speedX: (Math.random() - 0.5) * 0.8,
+          speedY: -0.3 - Math.random() * 0.7,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          shape: shapes[Math.floor(Math.random() * shapes.length)],
+          rotation: Math.random() * Math.PI * 2,
+          rotSpeed: (Math.random() - 0.5) * 0.04,
+          opacity: 0.3 + Math.random() * 0.5,
+          life: 0,
+          maxLife: 200 + Math.random() * 300
+        };
+      }
 
-        function resize() {
-          canvas.width = canvas.parentElement.offsetWidth;
-          canvas.height = canvas.parentElement.offsetHeight;
+      for (let i = 0; i < 60; i++) {
+        const p = createParticle();
+        p.life = Math.random() * p.maxLife;
+        particles.push(p);
+      }
+
+      function drawStar(cx, cy, size, rot) {
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(rot);
+        ctx.beginPath();
+        for (let i = 0; i < 5; i++) {
+          ctx.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * size, -Math.sin((18 + i * 72) * Math.PI / 180) * size);
+          ctx.lineTo(Math.cos((54 + i * 72) * Math.PI / 180) * size * 0.4, -Math.sin((54 + i * 72) * Math.PI / 180) * size * 0.4);
         }
-        resize();
-        window.addEventListener('resize', resize);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      }
 
-        function createParticle() {
-          return {
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            size: 3 + Math.random() * 8,
-            speedX: (Math.random() - 0.5) * 0.8,
-            speedY: -0.3 - Math.random() * 0.7,
-            color: colors[Math.floor(Math.random() * colors.length)],
-            shape: shapes[Math.floor(Math.random() * shapes.length)],
-            rotation: Math.random() * Math.PI * 2,
-            rotSpeed: (Math.random() - 0.5) * 0.04,
-            opacity: 0.3 + Math.random() * 0.5,
-            life: 0,
-            maxLife: 200 + Math.random() * 300
-          };
-        }
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((p, i) => {
+          p.x += p.speedX;
+          p.y += p.speedY;
+          p.rotation += p.rotSpeed;
+          p.life++;
 
-        for (let i = 0; i < 60; i++) {
-          const p = createParticle();
-          p.life = Math.random() * p.maxLife;
-          particles.push(p);
-        }
-
-        function drawStar(cx, cy, size, rot) {
-          ctx.save();
-          ctx.translate(cx, cy);
-          ctx.rotate(rot);
-          ctx.beginPath();
-          for (let i = 0; i < 5; i++) {
-            ctx.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * size, -Math.sin((18 + i * 72) * Math.PI / 180) * size);
-            ctx.lineTo(Math.cos((54 + i * 72) * Math.PI / 180) * size * 0.4, -Math.sin((54 + i * 72) * Math.PI / 180) * size * 0.4);
+          if (p.life > p.maxLife || p.y < -20 || p.x < -20 || p.x > canvas.width + 20) {
+            particles[i] = createParticle();
+            particles[i].y = canvas.height + 10;
+            return;
           }
-          ctx.closePath();
-          ctx.fill();
-          ctx.restore();
-        }
 
-        function animate() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          particles.forEach((p, i) => {
-            p.x += p.speedX;
-            p.y += p.speedY;
-            p.rotation += p.rotSpeed;
-            p.life++;
+          const fadeIn = Math.min(p.life / 30, 1);
+          const fadeOut = Math.max(0, 1 - (p.life - p.maxLife + 30) / 30);
+          ctx.globalAlpha = p.opacity * fadeIn * (p.life > p.maxLife - 30 ? fadeOut : 1);
+          ctx.fillStyle = p.color;
 
-            if (p.life > p.maxLife || p.y < -20 || p.x < -20 || p.x > canvas.width + 20) {
-              particles[i] = createParticle();
-              particles[i].y = canvas.height + 10;
-              return;
-            }
-
-            const fadeIn = Math.min(p.life / 30, 1);
-            const fadeOut = Math.max(0, 1 - (p.life - p.maxLife + 30) / 30);
-            ctx.globalAlpha = p.opacity * fadeIn * (p.life > p.maxLife - 30 ? fadeOut : 1);
-            ctx.fillStyle = p.color;
-
-            if (p.shape === 'circle') {
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-              ctx.fill();
-            } else if (p.shape === 'star') {
-              drawStar(p.x, p.y, p.size, p.rotation);
-            } else if (p.shape === 'square') {
-              ctx.save();
-              ctx.translate(p.x, p.y);
-              ctx.rotate(p.rotation);
-              ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
-              ctx.restore();
-            } else {
-              ctx.save();
-              ctx.translate(p.x, p.y);
-              ctx.rotate(p.rotation);
-              ctx.beginPath();
-              ctx.moveTo(0, -p.size);
-              ctx.lineTo(p.size * 0.87, p.size * 0.5);
-              ctx.lineTo(-p.size * 0.87, p.size * 0.5);
-              ctx.closePath();
-              ctx.fill();
-              ctx.restore();
-            }
-          });
-          ctx.globalAlpha = 1;
-          requestAnimationFrame(animate);
-        }
-        if (!prefersReduced) animate();
-      })();
-
-      // ═══════════════════════════════════════════════
-      // 2. TEXT SCRAMBLE ANIMATION
-      // ═══════════════════════════════════════════════
-      
-      document.getElementById('scramble-title').textContent = 'Tudo para sua festa começar com um sorriso 🎉';
-
-      // ═══════════════════════════════════════════════
-      // 3. CONFETTI EXPLOSION ON CTA BUTTONS
-      // ═══════════════════════════════════════════════
-      (function() {
-        const canvas = document.getElementById('confettiCanvas');
-        const ctx = canvas.getContext('2d');
-        let confettis = [];
-        let animating = false;
-
-        function resize() {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize);
-
-        const confettiColors = ['#FF6B9D', '#FFD700', '#0AAFE6', '#A855F7', '#FF4500', '#00E676', '#FF69B4', '#FFA500', '#E91E63', '#00BCD4'];
-
-        function explode(x, y) {
-          for (let i = 0; i < 80; i++) {
-            const angle = Math.random() * Math.PI * 2;
-            const speed = 4 + Math.random() * 10;
-            confettis.push({
-              x, y,
-              vx: Math.cos(angle) * speed,
-              vy: Math.sin(angle) * speed - 5,
-              color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
-              size: 4 + Math.random() * 6,
-              rotation: Math.random() * Math.PI * 2,
-              rotSpeed: (Math.random() - 0.5) * 0.3,
-              gravity: 0.15 + Math.random() * 0.1,
-              friction: 0.98,
-              opacity: 1,
-              shape: Math.random() > 0.5 ? 'rect' : 'circle'
-            });
-          }
-          if (!animating) { animating = true; animateConfetti(); }
-        }
-
-        function animateConfetti() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          confettis = confettis.filter(c => c.opacity > 0.01);
-          if (confettis.length === 0) { animating = false; return; }
-
-          confettis.forEach(c => {
-            c.vx *= c.friction;
-            c.vy *= c.friction;
-            c.vy += c.gravity;
-            c.x += c.vx;
-            c.y += c.vy;
-            c.rotation += c.rotSpeed;
-            c.opacity -= 0.008;
-
-            ctx.globalAlpha = c.opacity;
-            ctx.fillStyle = c.color;
+          if (p.shape === 'circle') {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+          } else if (p.shape === 'star') {
+            drawStar(p.x, p.y, p.size, p.rotation);
+          } else if (p.shape === 'square') {
             ctx.save();
-            ctx.translate(c.x, c.y);
-            ctx.rotate(c.rotation);
-            if (c.shape === 'rect') {
-              ctx.fillRect(-c.size / 2, -c.size / 4, c.size, c.size / 2);
-            } else {
-              ctx.beginPath();
-              ctx.arc(0, 0, c.size / 2, 0, Math.PI * 2);
-              ctx.fill();
-            }
-            ctx.restore();
-          });
-          ctx.globalAlpha = 1;
-          requestAnimationFrame(animateConfetti);
-        }
-
-        document.querySelectorAll('[data-confetti]').forEach(btn => {
-          btn.addEventListener('click', function(e) {
-            const rect = this.getBoundingClientRect();
-            explode(rect.left + rect.width / 2, rect.top + rect.height / 2);
-          });
-        });
-      })();
-
-      // ═══════════════════════════════════════════════
-      // 4. PARALLAX LAYERS
-      // ═══════════════════════════════════════════════
-      (function() {
-        const layer1 = document.getElementById('parallax-layer-1');
-        const layer2 = document.getElementById('parallax-layer-2');
-        const emojis1 = ['🎈', '🍬', '🎀', '⭐', '🧁', '🍫'];
-        const emojis2 = ['🎉', '🍭', '💫', '🎂', '🌟', '🎁'];
-
-        [layer1, layer2].forEach((layer, li) => {
-          const list = li === 0 ? emojis1 : emojis2;
-          for (let i = 0; i < 12; i++) {
-            const el = document.createElement('span');
-            el.className = 'parallax-element';
-            el.textContent = list[Math.floor(Math.random() * list.length)];
-            el.style.left = Math.random() * 100 + '%';
-            el.style.top = Math.random() * 100 + '%';
-            el.style.fontSize = (1 + Math.random() * 2.5) + 'rem';
-            el.style.opacity = 0.08 + Math.random() * 0.12;
-            layer.appendChild(el);
-          }
-        });
-
-        gsap.to('#parallax-layer-1', {
-          y: 150,
-          scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 }
-        });
-        gsap.to('#parallax-layer-2', {
-          y: 80,
-          scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 2 }
-        });
-      })();
-
-      // ═══════════════════════════════════════════════
-      // 5. EXPERIENCE SECTION MAGIC PARTICLES
-      // ═══════════════════════════════════════════════
-      (function() {
-        const container = document.getElementById('experience-particles');
-        const colors = ['#FFD700', '#FF6B9D', '#0AAFE6', '#A855F7', '#FF4500', '#00E676'];
-
-        for (let i = 0; i < 30; i++) {
-          const p = document.createElement('div');
-          p.className = 'magic-particle';
-          const size = 3 + Math.random() * 8;
-          p.style.width = size + 'px';
-          p.style.height = size + 'px';
-          p.style.background = colors[Math.floor(Math.random() * colors.length)];
-          p.style.left = Math.random() * 100 + '%';
-          p.style.bottom = '-10px';
-          p.style.animationDuration = (5 + Math.random() * 10) + 's';
-          p.style.animationDelay = Math.random() * 8 + 's';
-          p.style.opacity = 0.3 + Math.random() * 0.5;
-          container.appendChild(p);
-        }
-      })();
-
-      // ═══════════════════════════════════════════════
-      // 6. BRIGADEIRO INTERACTIVE PARTICLES (Canvas)
-      // ═══════════════════════════════════════════════
-      (function() {
-        const canvas = document.getElementById('brigadeiro-particles');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        const section = document.getElementById('datas-marcantes');
-        let mouse = { x: -9999, y: -9999 };
-        let particles = [];
-        const PARTICLE_COUNT = 180;
-        const MOUSE_RADIUS = 120;
-        const sprinkleColors = ['#8B5E3C', '#6B3A1F', '#D4A574', '#FFD700', '#FFA500', '#FF69B4', '#E8967A', '#C4843A'];
-
-        function resize() {
-          canvas.width = section.offsetWidth;
-          canvas.height = section.offsetHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize);
-
-        function createParticle() {
-          return {
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            baseX: 0, baseY: 0,
-            vx: (Math.random() - 0.5) * 0.3,
-            vy: (Math.random() - 0.5) * 0.3,
-            w: 2 + Math.random() * 3,
-            h: 6 + Math.random() * 10,
-            rotation: Math.random() * Math.PI * 2,
-            rotSpeed: (Math.random() - 0.5) * 0.02,
-            color: sprinkleColors[Math.floor(Math.random() * sprinkleColors.length)],
-            opacity: 0.5 + Math.random() * 0.5
-          };
-        }
-        for (let i = 0; i < PARTICLE_COUNT; i++) {
-          const p = createParticle();
-          p.baseX = p.x; p.baseY = p.y;
-          particles.push(p);
-        }
-
-        canvas.addEventListener('mousemove', function(e) {
-          const rect = canvas.getBoundingClientRect();
-          mouse.x = e.clientX - rect.left;
-          mouse.y = e.clientY - rect.top;
-        });
-        canvas.addEventListener('mouseleave', function() {
-          mouse.x = -9999; mouse.y = -9999;
-        });
-
-        function animate() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          particles.forEach(p => {
-            const dx = p.x - mouse.x;
-            const dy = p.y - mouse.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < MOUSE_RADIUS && dist > 0) {
-              const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS;
-              const angle = Math.atan2(dy, dx);
-              p.vx += Math.cos(angle) * force * 2;
-              p.vy += Math.sin(angle) * force * 2;
-              p.rotSpeed += force * 0.05;
-            }
-            // drift back gently
-            p.vx += (p.baseX - p.x) * 0.003;
-            p.vy += (p.baseY - p.y) * 0.003;
-            p.vx *= 0.95;
-            p.vy *= 0.95;
-            p.x += p.vx;
-            p.y += p.vy;
-            p.rotation += p.rotSpeed;
-            p.rotSpeed *= 0.98;
-
-            ctx.save();
-            ctx.globalAlpha = p.opacity;
             ctx.translate(p.x, p.y);
             ctx.rotate(p.rotation);
-            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+          } else {
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.rotation);
             ctx.beginPath();
-            ctx.roundRect(-p.w / 2, -p.h / 2, p.w, p.h, p.w / 2);
+            ctx.moveTo(0, -p.size);
+            ctx.lineTo(p.size * 0.87, p.size * 0.5);
+            ctx.lineTo(-p.size * 0.87, p.size * 0.5);
+            ctx.closePath();
             ctx.fill();
             ctx.restore();
+          }
+        });
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(animate);
+      }
+      if (!prefersReduced) animate();
+    })();
+
+    // ═══════════════════════════════════════════════
+    // 2. TEXT SCRAMBLE ANIMATION
+    // ═══════════════════════════════════════════════
+
+    document.getElementById('scramble-title').textContent = 'Tudo para sua festa começar com um sorriso 🎉';
+
+    // ═══════════════════════════════════════════════
+    // 3. CONFETTI EXPLOSION ON CTA BUTTONS
+    // ═══════════════════════════════════════════════
+    (function () {
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      let confettis = [];
+      let animating = false;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const confettiColors = ['#FF6B9D', '#FFD700', '#0AAFE6', '#A855F7', '#FF4500', '#00E676', '#FF69B4', '#FFA500', '#E91E63', '#00BCD4'];
+
+      function explode(x, y) {
+        for (let i = 0; i < 80; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = 4 + Math.random() * 10;
+          confettis.push({
+            x, y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 5,
+            color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+            size: 4 + Math.random() * 6,
+            rotation: Math.random() * Math.PI * 2,
+            rotSpeed: (Math.random() - 0.5) * 0.3,
+            gravity: 0.15 + Math.random() * 0.1,
+            friction: 0.98,
+            opacity: 1,
+            shape: Math.random() > 0.5 ? 'rect' : 'circle'
           });
-          requestAnimationFrame(animate);
         }
-        if (!prefersReduced) animate();
-      })();
-
-      // ═══════════════════════════════════════════════
-      // 7. GSAP SCROLL ANIMATIONS (Lando Norris style - dramatic motion)
-      // ═══════════════════════════════════════════════
-
-      // Hero blobs parallax
-      gsap.to('.hero-blob-1', { y: 120, x: 40, scale: 1.15, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1.5 } });
-      gsap.to('.hero-blob-2', { y: 80, x: -30, scale: 0.9, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1.5 } });
-      gsap.to('.hero-blob-3', { y: -60, x: 50, scale: 1.2, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 2 } });
-      gsap.to('.hero-content', { y: -80, opacity: 0.3, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 } });
-
-      // Section titles reveal with cinematic entrance
-      document.querySelectorAll('.section-title').forEach(title => {
-        ScrollTrigger.create({
-          trigger: title, start: 'top 85%', once: true,
-          onEnter: () => {
-            gsap.fromTo(title, { opacity: 0, y: 60, scale: 0.9, rotationX: 15 },
-              { opacity: 1, y: 0, scale: 1, rotationX: 0, duration: 1, ease: 'power4.out' });
-            title.classList.add('revealed');
-          }
-        });
-      });
-
-      // Section subtitles
-      document.querySelectorAll('.section-subtitle').forEach(sub => {
-        gsap.fromTo(sub, { opacity: 0, y: 40 }, {
-          opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
-          scrollTrigger: { trigger: sub, start: 'top 85%', once: true }
-        });
-      });
-
-      // About cards — clip-path reveal + stagger
-      document.querySelectorAll('.about-card').forEach((card, i) => {
-        ScrollTrigger.create({
-          trigger: card, start: 'top 85%', once: true,
-          onEnter: () => {
-            setTimeout(() => card.classList.add('revealed'), i * 200);
-          }
-        });
-      });
-
-      // Sobre nós — diagonal clip-path feel
-      gsap.fromTo('.sobre-nos-text', { opacity: 0, x: -80, skewX: 3 }, {
-        opacity: 1, x: 0, skewX: 0, duration: 1.2, ease: 'power4.out',
-        scrollTrigger: { trigger: '.sobre-nos-grid', start: 'top 80%', once: true }
-      });
-      gsap.fromTo('.sobre-nos-highlight', { opacity: 0, x: 80, rotateY: 12 }, {
-        opacity: 1, x: 0, rotateY: 0, duration: 1.2, ease: 'power4.out', delay: 0.3,
-        scrollTrigger: { trigger: '.sobre-nos-grid', start: 'top 80%', once: true }
-      });
-
-      // Data cards — clip-path reveal stagger
-      document.querySelectorAll('.data-card').forEach((card, i) => {
-        ScrollTrigger.create({
-          trigger: card, start: 'top 85%', once: true,
-          onEnter: () => {
-            setTimeout(() => card.classList.add('revealed'), i * 180);
-          }
-        });
-      });
-
-      // Datas quote
-      gsap.fromTo('.datas-marcantes-quote', { opacity: 0, scale: 0.7, rotateX: 20 }, {
-        opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'elastic.out(1, 0.5)',
-        scrollTrigger: { trigger: '.datas-marcantes-quote', start: 'top 85%', once: true }
-      });
-
-      // Product cards — clip-path reveal
-      document.querySelectorAll('.product-card').forEach((card, i) => {
-        ScrollTrigger.create({
-          trigger: card, start: 'top 85%', once: true,
-          onEnter: () => {
-            setTimeout(() => card.classList.add('revealed'), i * 150);
-          }
-        });
-      });
-
-      // Experience
-      gsap.fromTo('.experience-inner', { opacity: 0, y: 80, scale: 0.9 }, {
-        opacity: 1, y: 0, scale: 1, duration: 1.2, ease: 'power4.out',
-        scrollTrigger: { trigger: '#experience', start: 'top 75%', once: true }
-      });
-
-      // Map
-      gsap.fromTo('.map-wrapper', { opacity: 0, y: 60, scale: 0.9 }, {
-        opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out',
-        scrollTrigger: { trigger: '.map-wrapper', start: 'top 80%', once: true }
-      });
-
-      // Location buttons
-      gsap.fromTo('.location-buttons', { opacity: 0, y: 30 }, {
-        opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
-        scrollTrigger: { trigger: '.location-buttons', start: 'top 90%', once: true }
-      });
-
-      // Footer
-      gsap.fromTo('.footer-inner', { opacity: 0, y: 50 }, {
-        opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: '#footer', start: 'top 85%', once: true }
-      });
-
-      // ═══════════════════════════════════════════════
-      // 8. INTERACTIVE EFFECTS
-      // ═══════════════════════════════════════════════
-
-      // Cursor dot
-      if (window.matchMedia('(hover: hover)').matches && !prefersReduced) {
-        const dot = document.getElementById('cursorDot');
-        document.addEventListener('mousemove', e => {
-          gsap.to(dot, { x: e.clientX - 4, y: e.clientY - 4, opacity: 0.6, duration: 0.25, ease: 'power2.out' });
-        });
-        document.addEventListener('mouseleave', () => gsap.to(dot, { opacity: 0, duration: 0.2 }));
+        if (!animating) { animating = true; animateConfetti(); }
       }
 
-      // Button ripple + magnetic effect
-      document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          const circle = document.createElement('span');
-          circle.classList.add('ripple');
+      function animateConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confettis = confettis.filter(c => c.opacity > 0.01);
+        if (confettis.length === 0) { animating = false; return; }
+
+        confettis.forEach(c => {
+          c.vx *= c.friction;
+          c.vy *= c.friction;
+          c.vy += c.gravity;
+          c.x += c.vx;
+          c.y += c.vy;
+          c.rotation += c.rotSpeed;
+          c.opacity -= 0.008;
+
+          ctx.globalAlpha = c.opacity;
+          ctx.fillStyle = c.color;
+          ctx.save();
+          ctx.translate(c.x, c.y);
+          ctx.rotate(c.rotation);
+          if (c.shape === 'rect') {
+            ctx.fillRect(-c.size / 2, -c.size / 4, c.size, c.size / 2);
+          } else {
+            ctx.beginPath();
+            ctx.arc(0, 0, c.size / 2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          ctx.restore();
+        });
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(animateConfetti);
+      }
+
+      document.querySelectorAll('[data-confetti]').forEach(btn => {
+        btn.addEventListener('click', function (e) {
           const rect = this.getBoundingClientRect();
-          const size = Math.max(rect.width, rect.height);
-          circle.style.width = circle.style.height = size + 'px';
-          circle.style.left = (e.clientX - rect.left - size / 2) + 'px';
-          circle.style.top = (e.clientY - rect.top - size / 2) + 'px';
-          this.appendChild(circle);
-          setTimeout(() => circle.remove(), 600);
+          explode(rect.left + rect.width / 2, rect.top + rect.height / 2);
         });
+      });
+    })();
 
-        if (window.matchMedia('(hover: hover)').matches) {
-          btn.addEventListener('mousemove', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            gsap.to(this, { x: x * 0.15, y: y * 0.15, duration: 0.3, ease: 'power2.out' });
-          });
-          btn.addEventListener('mouseleave', function() {
-            gsap.to(this, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
-          });
+    // ═══════════════════════════════════════════════
+    // 4. PARALLAX LAYERS
+    // ═══════════════════════════════════════════════
+    (function () {
+      const layer1 = document.getElementById('parallax-layer-1');
+      const layer2 = document.getElementById('parallax-layer-2');
+      const emojis1 = ['🎈', '🍬', '🎀', '⭐', '🧁', '🍫'];
+      const emojis2 = ['🎉', '🍭', '💫', '🎂', '🌟', '🎁'];
+
+      [layer1, layer2].forEach((layer, li) => {
+        const list = li === 0 ? emojis1 : emojis2;
+        for (let i = 0; i < 12; i++) {
+          const el = document.createElement('span');
+          el.className = 'parallax-element';
+          el.textContent = list[Math.floor(Math.random() * list.length)];
+          el.style.left = Math.random() * 100 + '%';
+          el.style.top = Math.random() * 100 + '%';
+          el.style.fontSize = (1 + Math.random() * 2.5) + 'rem';
+          el.style.opacity = 0.08 + Math.random() * 0.12;
+          layer.appendChild(el);
         }
       });
 
-      // 3D tilt hover on ALL cards (about, data, product)
-      if (window.matchMedia('(hover: hover)').matches) {
-        document.querySelectorAll('.product-card, .about-card, .data-card').forEach(card => {
-          card.style.transformStyle = 'preserve-3d';
-          card.style.perspective = '800px';
-          card.addEventListener('mouseenter', function() {
-            gsap.to(this, { scale: 1.05, boxShadow: '0 25px 50px rgba(0,0,0,0.25)', duration: 0.4, ease: 'power2.out' });
-          });
-          card.addEventListener('mousemove', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = (e.clientX - rect.left) / rect.width - 0.5;
-            const y = (e.clientY - rect.top) / rect.height - 0.5;
-            gsap.to(this, {
-              rotateY: x * 0, rotateX: -y * 0,
-              boxShadow: `${-x * 30}px ${y * 30}px 50px rgba(0,0,0,0.2)`,
-              duration: 0.3, ease: 'power2.out'
-            });
-          });
-          card.addEventListener('mouseleave', function() {
-            gsap.to(this, {
-              rotateY: 0, rotateX: 0, scale: 1,
-              boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
-              duration: 0.8, ease: 'elastic.out(1, 0.4)'
-            });
-          });
-        });
+      gsap.to('#parallax-layer-1', {
+        y: 150,
+        scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 }
+      });
+      gsap.to('#parallax-layer-2', {
+        y: 80,
+        scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 2 }
+      });
+    })();
+
+    // ═══════════════════════════════════════════════
+    // 5. EXPERIENCE SECTION MAGIC PARTICLES
+    // ═══════════════════════════════════════════════
+    (function () {
+      const container = document.getElementById('experience-particles');
+      const colors = ['#FFD700', '#FF6B9D', '#0AAFE6', '#A855F7', '#FF4500', '#00E676'];
+
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'magic-particle';
+        const size = 3 + Math.random() * 8;
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+        p.style.background = colors[Math.floor(Math.random() * colors.length)];
+        p.style.left = Math.random() * 100 + '%';
+        p.style.bottom = '-10px';
+        p.style.animationDuration = (5 + Math.random() * 10) + 's';
+        p.style.animationDelay = Math.random() * 8 + 's';
+        p.style.opacity = 0.3 + Math.random() * 0.5;
+        container.appendChild(p);
+      }
+    })();
+
+    // ═══════════════════════════════════════════════
+    // 6. BRIGADEIRO INTERACTIVE PARTICLES (Canvas)
+    // ═══════════════════════════════════════════════
+    (function () {
+      const canvas = document.getElementById('brigadeiro-particles');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const section = document.getElementById('datas-marcantes');
+      let mouse = { x: -9999, y: -9999 };
+      let particles = [];
+      const PARTICLE_COUNT = 180;
+      const MOUSE_RADIUS = 120;
+      const sprinkleColors = ['#8B5E3C', '#6B3A1F', '#D4A574', '#FFD700', '#FFA500', '#FF69B4', '#E8967A', '#C4843A'];
+
+      function resize() {
+        canvas.width = section.offsetWidth;
+        canvas.height = section.offsetHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function createParticle() {
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          baseX: 0, baseY: 0,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          w: 2 + Math.random() * 3,
+          h: 6 + Math.random() * 10,
+          rotation: Math.random() * Math.PI * 2,
+          rotSpeed: (Math.random() - 0.5) * 0.02,
+          color: sprinkleColors[Math.floor(Math.random() * sprinkleColors.length)],
+          opacity: 0.5 + Math.random() * 0.5
+        };
+      }
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        const p = createParticle();
+        p.baseX = p.x; p.baseY = p.y;
+        particles.push(p);
       }
 
-      // WhatsApp floating
-      const whatsBtn = document.querySelector('.floating-whatsapp');
-      if (whatsBtn && !prefersReduced) {
-        gsap.fromTo(whatsBtn, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(2)', delay: 1.5 });
-      }
+      canvas.addEventListener('mousemove', function (e) {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      });
+      canvas.addEventListener('mouseleave', function () {
+        mouse.x = -9999; mouse.y = -9999;
+      });
 
-      // Emoji bounce
-      document.querySelectorAll('.about-card-icon, .data-card-emoji, .sobre-nos-highlight-emoji').forEach(emoji => {
-        ScrollTrigger.create({
-          trigger: emoji, start: 'top 85%', once: true,
-          onEnter: () => {
-            gsap.fromTo(emoji, { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.7, ease: 'elastic.out(1, 0.3)' });
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < MOUSE_RADIUS && dist > 0) {
+            const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS;
+            const angle = Math.atan2(dy, dx);
+            p.vx += Math.cos(angle) * force * 2;
+            p.vy += Math.sin(angle) * force * 2;
+            p.rotSpeed += force * 0.05;
           }
+          // drift back gently
+          p.vx += (p.baseX - p.x) * 0.003;
+          p.vy += (p.baseY - p.y) * 0.003;
+          p.vx *= 0.95;
+          p.vy *= 0.95;
+          p.x += p.vx;
+          p.y += p.vy;
+          p.rotation += p.rotSpeed;
+          p.rotSpeed *= 0.98;
+
+          ctx.save();
+          ctx.globalAlpha = p.opacity;
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rotation);
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.roundRect(-p.w / 2, -p.h / 2, p.w, p.h, p.w / 2);
+          ctx.fill();
+          ctx.restore();
         });
+        requestAnimationFrame(animate);
+      }
+      if (!prefersReduced) animate();
+    })();
+
+    // ═══════════════════════════════════════════════
+    // 7. GSAP SCROLL ANIMATIONS (Lando Norris style - dramatic motion)
+    // ═══════════════════════════════════════════════
+
+    // Hero blobs parallax
+    gsap.to('.hero-blob-1', { y: 120, x: 40, scale: 1.15, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1.5 } });
+    gsap.to('.hero-blob-2', { y: 80, x: -30, scale: 0.9, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1.5 } });
+    gsap.to('.hero-blob-3', { y: -60, x: 50, scale: 1.2, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 2 } });
+    gsap.to('.hero-content', { y: -80, opacity: 0.3, scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 } });
+
+    // Section titles reveal with cinematic entrance
+    document.querySelectorAll('.section-title').forEach(title => {
+      ScrollTrigger.create({
+        trigger: title, start: 'top 85%', once: true,
+        onEnter: () => {
+          gsap.fromTo(title, { opacity: 0, y: 60, scale: 0.9, rotationX: 15 },
+            { opacity: 1, y: 0, scale: 1, rotationX: 0, duration: 1, ease: 'power4.out' });
+          title.classList.add('revealed');
+        }
+      });
+    });
+
+    // Section subtitles
+    document.querySelectorAll('.section-subtitle').forEach(sub => {
+      gsap.fromTo(sub, { opacity: 0, y: 40 }, {
+        opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+        scrollTrigger: { trigger: sub, start: 'top 85%', once: true }
+      });
+    });
+
+    // About cards — clip-path reveal + stagger
+    document.querySelectorAll('.about-card').forEach((card, i) => {
+      ScrollTrigger.create({
+        trigger: card, start: 'top 85%', once: true,
+        onEnter: () => {
+          setTimeout(() => card.classList.add('revealed'), i * 200);
+        }
+      });
+    });
+
+    // Sobre nós — diagonal clip-path feel
+    gsap.fromTo('.sobre-nos-text', { opacity: 0, x: -80, skewX: 3 }, {
+      opacity: 1, x: 0, skewX: 0, duration: 1.2, ease: 'power4.out',
+      scrollTrigger: { trigger: '.sobre-nos-grid', start: 'top 80%', once: true }
+    });
+    gsap.fromTo('.sobre-nos-highlight', { opacity: 0, x: 80, rotateY: 12 }, {
+      opacity: 1, x: 0, rotateY: 0, duration: 1.2, ease: 'power4.out', delay: 0.3,
+      scrollTrigger: { trigger: '.sobre-nos-grid', start: 'top 80%', once: true }
+    });
+
+    // Data cards — clip-path reveal stagger
+    document.querySelectorAll('.data-card').forEach((card, i) => {
+      ScrollTrigger.create({
+        trigger: card, start: 'top 85%', once: true,
+        onEnter: () => {
+          setTimeout(() => card.classList.add('revealed'), i * 180);
+        }
+      });
+    });
+
+    // Datas quote
+    gsap.fromTo('.datas-marcantes-quote', { opacity: 0, scale: 0.7, rotateX: 20 }, {
+      opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'elastic.out(1, 0.5)',
+      scrollTrigger: { trigger: '.datas-marcantes-quote', start: 'top 85%', once: true }
+    });
+
+    // Product cards — clip-path reveal
+    document.querySelectorAll('.product-card').forEach((card, i) => {
+      ScrollTrigger.create({
+        trigger: card, start: 'top 85%', once: true,
+        onEnter: () => {
+          setTimeout(() => card.classList.add('revealed'), i * 150);
+        }
+      });
+    });
+
+    // Experience
+    gsap.fromTo('.experience-inner', { opacity: 0, y: 80, scale: 0.9 }, {
+      opacity: 1, y: 0, scale: 1, duration: 1.2, ease: 'power4.out',
+      scrollTrigger: { trigger: '#experience', start: 'top 75%', once: true }
+    });
+
+    // Map
+    gsap.fromTo('.map-wrapper', { opacity: 0, y: 60, scale: 0.9 }, {
+      opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: '.map-wrapper', start: 'top 80%', once: true }
+    });
+
+    // Location buttons
+    gsap.fromTo('.location-buttons', { opacity: 0, y: 30 }, {
+      opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+      scrollTrigger: { trigger: '.location-buttons', start: 'top 90%', once: true }
+    });
+
+    // Footer
+    gsap.fromTo('.footer-inner', { opacity: 0, y: 50 }, {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: '#footer', start: 'top 85%', once: true }
+    });
+
+    // ═══════════════════════════════════════════════
+    // 8. INTERACTIVE EFFECTS
+    // ═══════════════════════════════════════════════
+
+    // Cursor dot
+    if (window.matchMedia('(hover: hover)').matches && !prefersReduced) {
+      const dot = document.getElementById('cursorDot');
+      document.addEventListener('mousemove', e => {
+        gsap.to(dot, { x: e.clientX - 4, y: e.clientY - 4, opacity: 0.6, duration: 0.25, ease: 'power2.out' });
+      });
+      document.addEventListener('mouseleave', () => gsap.to(dot, { opacity: 0, duration: 0.2 }));
+    }
+
+    // Button ripple + magnetic effect
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const circle = document.createElement('span');
+        circle.classList.add('ripple');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        circle.style.width = circle.style.height = size + 'px';
+        circle.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        circle.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        this.appendChild(circle);
+        setTimeout(() => circle.remove(), 600);
       });
 
-      // Floating scroll decorations across ALL sections
-      const scrollEmojis = [
-        { emoji: '🎁', sections: ['#about', '#sobre-nos', '#products', '#experience', '#location'] },
-        { emoji: '🍬', sections: ['#about', '#sobre-nos', '#products', '#experience'] },
-        { emoji: '🍿', sections: ['#sobre-nos', '#products', '#location'] },
-        { emoji: '🧁', sections: ['#about', '#experience', '#location'] },
-        { emoji: '🍭', sections: ['#about', '#products'] },
-        { emoji: '🎀', sections: ['#sobre-nos', '#experience'] },
-        { emoji: '🍫', sections: ['#products', '#location'] },
-        { emoji: '🎉', sections: ['#about', '#sobre-nos'] }
-      ];
-      scrollEmojis.forEach(item => {
-        item.sections.forEach(sel => {
-          const section = document.querySelector(sel);
-          if (!section) return;
-          const el = document.createElement('span');
-          el.className = 'floating-candy';
-          el.textContent = item.emoji;
-          // Place on edges (left or right side)
-          const side = Math.random() > 0.5;
-          el.style.left = side ? (2 + Math.random() * 12) + '%' : (86 + Math.random() * 12) + '%';
-          el.style.top = (10 + Math.random() * 70) + '%';
-          el.style.fontSize = (1.5 + Math.random() * 2) + 'rem';
-          el.style.opacity = '0';
-          section.appendChild(el);
-
-          // Parallax float with fade in/out
-          const speed = 0.8 + Math.random() * 2;
-          gsap.fromTo(el,
-            { y: 60, opacity: 0, rotation: -20 - Math.random() * 30, scale: 0.5 },
-            {
-              y: -80 - Math.random() * 60,
-              opacity: 0.2 + Math.random() * 0.15,
-              rotation: 20 + Math.random() * 30,
-              scale: 0.8 + Math.random() * 0.3,
-              scrollTrigger: {
-                trigger: section,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: speed
-              }
-            }
-          );
+      if (window.matchMedia('(hover: hover)').matches) {
+        btn.addEventListener('mousemove', function (e) {
+          const rect = this.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          gsap.to(this, { x: x * 0.15, y: y * 0.15, duration: 0.3, ease: 'power2.out' });
         });
-      });
-
-      // Scroll progress bar
-      gsap.to('#scrollProgress', {
-        width: '100%', ease: 'none',
-        scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.3 }
-      });
-
-      // Hero CTA glow pulse
-      const heroCta = document.querySelector('.hero-cta');
-      if (heroCta && !prefersReduced) {
-        gsap.to(heroCta, {
-          boxShadow: '0 0 30px hsla(46,100%,50%,0.5), 0 0 60px hsla(46,100%,50%,0.2)',
-          duration: 1.5, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 2
+        btn.addEventListener('mouseleave', function () {
+          gsap.to(this, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
         });
       }
+    });
 
-      window.addEventListener('load', () => ScrollTrigger.refresh());
-    </script>
-  </body>
+    // 3D tilt hover on ALL cards (about, data, product)
+    if (window.matchMedia('(hover: hover)').matches) {
+      document.querySelectorAll('.product-card, .about-card, .data-card').forEach(card => {
+        card.style.transformStyle = 'preserve-3d';
+        card.style.perspective = '800px';
+        card.addEventListener('mouseenter', function () {
+          gsap.to(this, { scale: 1.05, boxShadow: '0 25px 50px rgba(0,0,0,0.25)', duration: 0.4, ease: 'power2.out' });
+        });
+        card.addEventListener('mousemove', function (e) {
+          const rect = this.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          gsap.to(this, {
+            rotateY: x * 0, rotateX: -y * 0,
+            boxShadow: `${-x * 30}px ${y * 30}px 50px rgba(0,0,0,0.2)`,
+            duration: 0.3, ease: 'power2.out'
+          });
+        });
+        card.addEventListener('mouseleave', function () {
+          gsap.to(this, {
+            rotateY: 0, rotateX: 0, scale: 1,
+            boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+            duration: 0.8, ease: 'elastic.out(1, 0.4)'
+          });
+        });
+      });
+    }
+
+    // WhatsApp floating
+    const whatsBtn = document.querySelector('.floating-whatsapp');
+    if (whatsBtn && !prefersReduced) {
+      gsap.fromTo(whatsBtn, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(2)', delay: 1.5 });
+    }
+
+    // Emoji bounce
+    document.querySelectorAll('.about-card-icon, .data-card-emoji, .sobre-nos-highlight-emoji').forEach(emoji => {
+      ScrollTrigger.create({
+        trigger: emoji, start: 'top 85%', once: true,
+        onEnter: () => {
+          gsap.fromTo(emoji, { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.7, ease: 'elastic.out(1, 0.3)' });
+        }
+      });
+    });
+
+    // Floating scroll decorations across ALL sections
+    const scrollEmojis = [
+      { emoji: '🎁', sections: ['#about', '#sobre-nos', '#products', '#experience', '#location'] },
+      { emoji: '🍬', sections: ['#about', '#sobre-nos', '#products', '#experience'] },
+      { emoji: '🍿', sections: ['#sobre-nos', '#products', '#location'] },
+      { emoji: '🧁', sections: ['#about', '#experience', '#location'] },
+      { emoji: '🍭', sections: ['#about', '#products'] },
+      { emoji: '🎀', sections: ['#sobre-nos', '#experience'] },
+      { emoji: '🍫', sections: ['#products', '#location'] },
+      { emoji: '🎉', sections: ['#about', '#sobre-nos'] }
+    ];
+    scrollEmojis.forEach(item => {
+      item.sections.forEach(sel => {
+        const section = document.querySelector(sel);
+        if (!section) return;
+        const el = document.createElement('span');
+        el.className = 'floating-candy';
+        el.textContent = item.emoji;
+        // Place on edges (left or right side)
+        const side = Math.random() > 0.5;
+        el.style.left = side ? (2 + Math.random() * 12) + '%' : (86 + Math.random() * 12) + '%';
+        el.style.top = (10 + Math.random() * 70) + '%';
+        el.style.fontSize = (1.5 + Math.random() * 2) + 'rem';
+        el.style.opacity = '0';
+        section.appendChild(el);
+
+        // Parallax float with fade in/out
+        const speed = 0.8 + Math.random() * 2;
+        gsap.fromTo(el,
+          { y: 60, opacity: 0, rotation: -20 - Math.random() * 30, scale: 0.5 },
+          {
+            y: -80 - Math.random() * 60,
+            opacity: 0.2 + Math.random() * 0.15,
+            rotation: 20 + Math.random() * 30,
+            scale: 0.8 + Math.random() * 0.3,
+            scrollTrigger: {
+              trigger: section,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: speed
+            }
+          }
+        );
+      });
+    });
+
+    // Scroll progress bar
+    gsap.to('#scrollProgress', {
+      width: '100%', ease: 'none',
+      scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.3 }
+    });
+
+    // Hero CTA glow pulse
+    const heroCta = document.querySelector('.hero-cta');
+    if (heroCta && !prefersReduced) {
+      gsap.to(heroCta, {
+        boxShadow: '0 0 30px hsla(46,100%,50%,0.5), 0 0 60px hsla(46,100%,50%,0.2)',
+        duration: 1.5, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 2
+      });
+    }
+
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+  </script>
+</body>
+
 </html>
